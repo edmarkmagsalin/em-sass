@@ -1,8 +1,15 @@
 const body = document.body;
 const toggle = document.querySelector('#toggle');
 
-switchTheme = () => {
-    body.getAttribute("data-theme") !== "dark" ? body.setAttribute("data-theme", "dark") : body.setAttribute("data-theme", "default")
+setTheme = () => {
+    let dataTheme = localStorage.getItem("data-theme") || "default";
+    dataTheme === "dark" && toggle.setAttribute("checked", "true")
+    body.setAttribute("data-theme", dataTheme)
 }
+setTheme();
 
-toggle.addEventListener('input', switchTheme)
+switchTheme = () => {
+    localStorage.getItem("data-theme") !== "dark" ? localStorage.setItem("data-theme", "dark") : localStorage.setItem("data-theme", "default")
+    setTheme();
+}
+toggle.addEventListener('input', switchTheme);
