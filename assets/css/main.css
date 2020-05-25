@@ -147,5 +147,6 @@ input[type=button]:hover {
 
 .toggle__cb {
   opacity: 0;
+  width: 0;
 }
 /*# sourceMappingURL=main.css.map */
