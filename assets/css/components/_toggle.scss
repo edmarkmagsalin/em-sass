@@ -1,0 +1,40 @@
+.toggle {
+    display: inline-block;
+    position: relative;
+    height: 1.5em;
+    width: 3em;
+    box-shadow: inset 0px 0px 2px 0px;
+    border-radius: 1.5em;
+    overflow: hidden;
+    cursor: pointer;
+
+    &__bg {
+        height: 100%;
+        transition: all $animationDuration ease-in-out;
+    }
+
+    &__cb:checked ~ label > &__bg {
+        background-color: $primaryColor;
+    }
+
+    &__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        transform: scale(0.8);
+        border-radius: 50%;
+        background-color: $lightColor;
+        box-shadow: 1px 1px 5px 1px $darkColor;
+        transition: all $animationDuration ease-in-out;
+    }
+
+    &__cb:checked ~ label > &__slider {
+        left: 50%;
+    }
+
+    &__cb {
+        opacity: 0;
+    }
+}

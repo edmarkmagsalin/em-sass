@@ -1,0 +1,22 @@
+$primaryColor: #52B788;
+$secondaryColor: #e5989b;
+$darkColor: lighten(#000000, 5);
+$lightColor: darken(#FFFFFF, 5);
+$animationDuration: .4s;
+
+$breakpoints: (
+  'small': (min-width: 576px),
+  'medium': (min-width: 768px),
+  'large': (min-width: 992px),
+  'extra-large': (min-width: 1200px),
+);
+
+:root,
+[data-theme="default"] {
+  --backgroundColor: #{$lightColor};
+  --color: #{$darkColor};
+}
+[data-theme="dark"] {
+  --backgroundColor: #{$darkColor};
+  --color: #{$lightColor};
+}

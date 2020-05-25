@@ -1,0 +1,151 @@
+:root,
+[data-theme="default"] {
+  --backgroundColor: #f2f2f2;
+  --color: #0d0d0d;
+}
+
+[data-theme="dark"] {
+  --backgroundColor: #0d0d0d;
+  --color: #f2f2f2;
+}
+
+body {
+  margin: 0;
+  background-color: var(--backgroundColor);
+  color: var(--color);
+  transition: all 0.4s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: #52B788;
+}
+
+a:hover {
+  color: #64be94;
+}
+
+:focus, :focus + label.toggle {
+  outline-color: #e5989b;
+  outline-offset: 1px;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header > nav > ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+header > nav > ul > li > a {
+  font-weight: bold;
+  padding: .5em 1em;
+  display: block;
+  color: #52B788;
+}
+
+footer > nav > ul {
+  font-weight: bold;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+footer > nav > ul > li > a {
+  color: #f2f2f2;
+}
+
+footer > nav > ul > li > a:hover {
+  text-decoration: underline;
+  color: #f2f2f2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  margin-top: 2em;
+  background-color: #52B788;
+  padding: 3em 0;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.logo > img {
+  width: 50px;
+}
+
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  background-color: #52B788;
+  border: 1px solid #52B788;
+  color: #f2f2f2;
+  border-radius: 1em;
+  padding: 1em 1.5em;
+  cursor: pointer;
+}
+
+button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover {
+  background-color: #64be94;
+}
+
+.toggle {
+  display: inline-block;
+  position: relative;
+  height: 1.5em;
+  width: 3em;
+  box-shadow: inset 0px 0px 2px 0px;
+  border-radius: 1.5em;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.toggle__bg {
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.toggle__cb:checked ~ label > .toggle__bg {
+  background-color: #52B788;
+}
+
+.toggle__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transform: scale(0.8);
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  box-shadow: 1px 1px 5px 1px #0d0d0d;
+  transition: all 0.4s ease-in-out;
+}
+
+.toggle__cb:checked ~ label > .toggle__slider {
+  left: 50%;
+}
+
+.toggle__cb {
+  opacity: 0;
+}
+/*# sourceMappingURL=main.css.map */

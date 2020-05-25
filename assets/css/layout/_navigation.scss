@@ -1,0 +1,26 @@
+header > nav > ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    & > li > a{
+        font-weight: bold;
+        padding: .5em 1em;
+        display: block;
+        color: $primaryColor;
+    }
+}
+
+footer > nav > ul {
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    & > li > a{
+        color: $lightColor;
+    }
+    & > li > a:hover{
+        text-decoration: underline;
+        color: $lightColor;
+    }
+}

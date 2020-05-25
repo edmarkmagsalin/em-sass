@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    background-color: var(--backgroundColor);
+    color: var(--color);
+    transition: all $animationDuration ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: $primaryColor;
+    &:hover {
+        color: lighten($primaryColor, 5);
+    }
+}
+
+:focus, :focus + label.toggle {
+    outline-color: $secondaryColor;
+    outline-offset: 1px;
+    outline-style: solid;
+    outline-width: 2px;
+}
+

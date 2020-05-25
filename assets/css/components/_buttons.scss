@@ -1,0 +1,15 @@
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+    background-color: $primaryColor;
+    border: 1px solid $primaryColor;
+    color: $lightColor;
+    border-radius: 1em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($primaryColor, 5);
+    }
+}
