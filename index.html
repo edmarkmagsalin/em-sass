@@ -9,80 +9,87 @@
 </head>
 <body data-theme="default">
     <header>
-        <div class="logo">
-            <img src="./assets/images/logo.png" alt="EM"> EM
+        <div class="container-fluid">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="EM"> EM
+            </div>
+            <nav class="main-nav">
+                <ul class="main-nav__menu">
+                    <li class="main-nav__items"><a href="#">Portfolio</a></li>
+                    <li class="main-nav__items"><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="main-nav">
-            <ul class="main-nav__menu">
-                <li class="main-nav__items"><a href="#">Portfolio</a></li>
-                <li class="main-nav__items"><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
     <main>
         <section>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ul>
-            <ol>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ol>
+            <div class="container">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+            </div>
         </section>
         <section>
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
-            <p>Paragraph</p>
-            <blockquote>blockquote</blockquote>
+            <div class="container">
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+                <p>Paragraph</p>
+                <blockquote>blockquote</blockquote>
+            </div>
         </section>
+        <section>
+            <div class="container">
+                <div class="toggle">
+                    <input type="checkbox" id="toggle" class="toggle__cb">
+                    <label class="toggle__bg" for="toggle"></label>
+                    <label class="toggle__slider" for="toggle"></label>
+                </div>
+                <form action="get">
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <input type="password" name="password" required>
+                    <input type="password" name="password2" required>
         
-        <label class="toggle" for="toggle">
-            <input type="checkbox" id="toggle" class="toggle__cb">
-            <div class="toggle__bg"></div>
-            <div class="toggle__slider"></div>
-        </label>
-        <form action="get">
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username" required>
+                    <input type="text" name="first-name">
+                    <input type="text" name="last-name">
+        
+                    <input type="month" name="birth-month">
+                    <input type="week" name="birth-week">
+                    <input type="date" name="birth-date">
+                    <input type="time" name="birth-time">
+                    
+                    <input type="file" name="image">
+                    <input type="color" name="favorite-color">
+                    <input type="radio" name="gender" value="male">
+                    <input type="radio" name="gender" value="female">
+                    <input type="checkbox" name="agree">
+                    
+                    <input type="reset">
+                    <input type="submit">
+        
+                    <input type="button" value="Button input">
+                    <button>Button tag</button>
+                    <textarea name="description" cols="30" rows="10"></textarea>
+                </form>
             </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
-            </div>
-            <input type="password" name="password" required>
-            <input type="password" name="password2" required>
-
-            <input type="text" name="first-name">
-            <input type="text" name="last-name">
-
-            <input type="month" name="birth-month">
-            <input type="week" name="birth-week">
-            <input type="date" name="birth-date">
-            <input type="time" name="birth-time">
-            
-            <input type="file" name="image">
-            <input type="color" name="favorite-color">
-            <input type="radio" name="gender" value="male">
-            <input type="radio" name="gender" value="female">
-            <input type="checkbox" name="agree">
-            
-            <input type="reset">
-            <input type="submit">
-
-            <input type="button" value="Button input">
-            <button>Button tag</button>
-            <textarea name="description" cols="30" rows="10"></textarea>
-        </form>
-        
-        
+        </section>
     </main>
     <footer>
         <nav>
