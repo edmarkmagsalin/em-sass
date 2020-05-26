@@ -13,7 +13,7 @@
         transition: all $animationDuration ease-in-out;
     }
 
-    &__cb:checked ~ label > &__bg {
+    &__cb:checked ~ &__bg {
         background-color: $primaryColor;
     }
 
@@ -30,12 +30,12 @@
         transition: all $animationDuration ease-in-out;
     }
 
-    &__cb:checked ~ label > &__slider {
+    &__cb:checked ~ &__slider {
         left: 50%;
     }
 
     &__cb {
         opacity: 0;
-        width: 0;
+        position: absolute;
     }
 }

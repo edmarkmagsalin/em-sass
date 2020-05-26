@@ -25,8 +25,8 @@ a:hover {
   color: #64be94;
 }
 
-:focus, :focus + label.toggle {
-  outline-color: #e5989b;
+:focus, :focus + .toggle__bg {
+  outline-color: #52B788;
   outline-offset: 1px;
   outline-style: solid;
   outline-width: 2px;
@@ -124,7 +124,7 @@ input[type=button]:hover {
   transition: all 0.4s ease-in-out;
 }
 
-.toggle__cb:checked ~ label > .toggle__bg {
+.toggle__cb:checked ~ .toggle__bg {
   background-color: #52B788;
 }
 
@@ -141,12 +141,12 @@ input[type=button]:hover {
   transition: all 0.4s ease-in-out;
 }
 
-.toggle__cb:checked ~ label > .toggle__slider {
+.toggle__cb:checked ~ .toggle__slider {
   left: 50%;
 }
 
 .toggle__cb {
   opacity: 0;
-  width: 0;
+  position: absolute;
 }
 /*# sourceMappingURL=main.css.map */

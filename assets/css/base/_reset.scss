@@ -13,8 +13,8 @@ a {
     }
 }
 
-:focus, :focus + label.toggle {
-    outline-color: $secondaryColor;
+:focus, :focus + .toggle__bg {
+    outline-color: $primaryColor;
     outline-offset: 1px;
     outline-style: solid;
     outline-width: 2px;
