@@ -13,8 +13,7 @@ a {
     }
 }
 
-:focus,
-:focus ~ label {
+:focus {
     outline-color: $primaryColor;
     outline-offset: 1px;
     outline-style: solid;

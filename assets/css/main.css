@@ -13,6 +13,7 @@ body {
   margin: 0;
   background-color: var(--backgroundColor);
   color: var(--color);
+  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
@@ -25,8 +26,7 @@ a:hover {
   color: #64be94;
 }
 
-:focus,
-:focus ~ label {
+:focus {
   outline-color: #52B788;
   outline-offset: 1px;
   outline-style: solid;
@@ -39,6 +39,8 @@ body {
 
 header > nav > ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
 }
@@ -53,8 +55,13 @@ header > nav > ul > li > a {
 footer > nav > ul {
   font-weight: bold;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0;
 }
 
@@ -68,9 +75,15 @@ footer > nav > ul > li > a:hover {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer {
@@ -80,8 +93,12 @@ footer {
 }
 
 .logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -114,7 +131,8 @@ input[type=button]:hover {
   position: relative;
   height: 1.5em;
   width: 3em;
-  box-shadow: inset 0px 0px 2px 0px;
+  -webkit-box-shadow: inset 0px 0px 2px 0px;
+          box-shadow: inset 0px 0px 2px 0px;
   border-radius: 1.5em;
   overflow: hidden;
   cursor: pointer;
@@ -124,6 +142,7 @@ input[type=button]:hover {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
@@ -137,10 +156,13 @@ input[type=button]:hover {
   left: 0;
   width: 50%;
   height: 100%;
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
   border-radius: 50%;
   background-color: #f2f2f2;
-  box-shadow: 1px 1px 5px 1px #0d0d0d;
+  -webkit-box-shadow: 1px 1px 5px 1px #0d0d0d;
+          box-shadow: 1px 1px 5px 1px #0d0d0d;
+  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
@@ -151,5 +173,52 @@ input[type=button]:hover {
 .toggle__cb {
   opacity: 0;
   position: absolute;
+}
+
+.toggles [type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.toggles [type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  padding: 0.5em;
+  height: 1.5em;
+  width: 3em;
+}
+
+.toggles [type="checkbox"] + label::before,
+.toggles [type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  height: 1.5em;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.toggles [type="checkbox"] + label::before {
+  left: 0;
+  top: 0.2em;
+  width: 3em;
+  border: 0.2em solid #767676;
+  background: #767676;
+  border-radius: 1.1em;
+}
+
+.toggles [type="checkbox"] + label::after {
+  left: 0;
+  top: 0.25em;
+  background-color: #fff;
+  background-position: center center;
+  border-radius: 50%;
+  width: 1.5em;
+  border: 0.15em solid #767676;
+}
+
+.toggles [type="checkbox"]:checked + label::after {
+  left: 1.6em;
+  border-color: #36a829;
+  color: #36a829;
 }
 /*# sourceMappingURL=main.css.map */

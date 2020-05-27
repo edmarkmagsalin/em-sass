@@ -5,6 +5,7 @@ $secondaryColor: #e5989b;
 $darkColor: lighten(#000000, 5);
 $lightColor: darken(#FFFFFF, 5);
 $animationDuration: .4s;
+$spacing: 1em;
 
 $breakpoints: (
   'small': (min-width: 576px),
