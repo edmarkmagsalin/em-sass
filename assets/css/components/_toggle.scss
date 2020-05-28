@@ -1,47 +1,3 @@
-.toggle {
-    display: inline-block;
-    position: relative;
-    height: 1.5em;
-    width: 3em;
-    box-shadow: inset 0px 0px 2px 0px;
-    border-radius: 1.5em;
-    overflow: hidden;
-    cursor: pointer;
-
-    &__bg {
-        position:absolute;
-        width: 100%;
-        height: 100%;
-        transition: all $animationDuration ease-in-out;
-    }
-
-    &__cb:checked ~ &__bg {
-        background-color: $primaryColor;
-    }
-
-    &__slider {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 100%;
-        transform: scale(0.8);
-        border-radius: 50%;
-        background-color: $lightColor;
-        box-shadow: 1px 1px 5px 1px $darkColor;
-        transition: all $animationDuration ease-in-out;
-    }
-
-    &__cb:checked ~ &__slider {
-        left: 50%;
-    }
-
-    &__cb {
-        opacity: 0;
-        position: absolute;
-    }
-}
-
 .toggles [type="checkbox"] {
     position: absolute;
     opacity: 0;
@@ -49,39 +5,45 @@
     & + label {
         display: inline-block;
         position: relative;
-        padding: 0.5em;
-        height: 1.5em;
+        cursor: pointer;
         width: 3em;
+        height: 1.5em;
     }
-
     
     & + label::before,
     & + label::after {
         content: "";
         position: absolute;
-        height: 1.5em;
-        transition: all $animationDuration ease-in;
+        height: 100%;
+        transition: left $animationDuration ease-in;
     }
+
+    // ::before is the toggle
     & + label::before {
-        left: 0;
-        top: 0.2em;
-        width: 3em;
-        border: 0.2em solid #767676;
+        width: 100%;
         background-color: $lightColor;
         border-radius: 1.1em;
+        box-shadow: inset 0px 0px 2px 0px;
     }
+
+    // ::after is the slider
     & + label::after {
         left: 0;
-        top: 0.25em;
         background-color: #fff;
-        background-position: center center;
         border-radius: 50%;
-        width: 1.5em;
-        border: 0.15em solid #767676;
+        width: 50%;
+        transform: scale(0.8);
+        box-shadow: 1px 1px 5px 1px $darkColor;
     }
     &:checked + label::after {
-        left: 1.6em;
-        border-color: #36a829;
-        color: #36a829;
+        left: 50%;
+    }
+    &:checked + label::before {
+        left: auto;
+        background-color: $primaryColor;;
+    }
+
+    &:focus + label::before {
+        @include focus;
     }
 }

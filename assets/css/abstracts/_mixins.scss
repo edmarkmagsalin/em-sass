@@ -16,3 +16,10 @@
         @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in `$breakpoints` map.';
     }
 }
+
+@mixin focus {
+    outline-color: $primaryColor;
+    outline-offset: 1px;
+    outline-style: solid;
+    outline-width: 2px;
+}

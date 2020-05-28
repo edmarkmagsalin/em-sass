@@ -1,5 +1,5 @@
 const body = document.body;
-const toggle = document.querySelector('#toggle');
+const toggle = document.querySelector('#darkmode');
 
 setTheme = () => {
     let dataTheme = localStorage.getItem("data-theme") || "default";

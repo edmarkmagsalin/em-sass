@@ -126,55 +126,6 @@ input[type=button]:hover {
   background-color: #64be94;
 }
 
-.toggle {
-  display: inline-block;
-  position: relative;
-  height: 1.5em;
-  width: 3em;
-  -webkit-box-shadow: inset 0px 0px 2px 0px;
-          box-shadow: inset 0px 0px 2px 0px;
-  border-radius: 1.5em;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.toggle__bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.toggle__cb:checked ~ .toggle__bg {
-  background-color: #52B788;
-}
-
-.toggle__slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  border-radius: 50%;
-  background-color: #f2f2f2;
-  -webkit-box-shadow: 1px 1px 5px 1px #0d0d0d;
-          box-shadow: 1px 1px 5px 1px #0d0d0d;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.toggle__cb:checked ~ .toggle__slider {
-  left: 50%;
-}
-
-.toggle__cb {
-  opacity: 0;
-  position: absolute;
-}
-
 .toggles [type="checkbox"] {
   position: absolute;
   opacity: 0;
@@ -183,42 +134,52 @@ input[type=button]:hover {
 .toggles [type="checkbox"] + label {
   display: inline-block;
   position: relative;
-  padding: 0.5em;
-  height: 1.5em;
+  cursor: pointer;
   width: 3em;
+  height: 1.5em;
 }
 
 .toggles [type="checkbox"] + label::before,
 .toggles [type="checkbox"] + label::after {
   content: "";
   position: absolute;
-  height: 1.5em;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
+  height: 100%;
+  -webkit-transition: left 0.4s ease-in;
+  transition: left 0.4s ease-in;
 }
 
 .toggles [type="checkbox"] + label::before {
-  left: 0;
-  top: 0.2em;
-  width: 3em;
-  border: 0.2em solid #767676;
-  background: #767676;
+  width: 100%;
+  background-color: #f2f2f2;
   border-radius: 1.1em;
+  -webkit-box-shadow: inset 0px 0px 2px 0px;
+          box-shadow: inset 0px 0px 2px 0px;
 }
 
 .toggles [type="checkbox"] + label::after {
   left: 0;
-  top: 0.25em;
   background-color: #fff;
-  background-position: center center;
   border-radius: 50%;
-  width: 1.5em;
-  border: 0.15em solid #767676;
+  width: 50%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-box-shadow: 1px 1px 5px 1px #0d0d0d;
+          box-shadow: 1px 1px 5px 1px #0d0d0d;
 }
 
 .toggles [type="checkbox"]:checked + label::after {
-  left: 1.6em;
-  border-color: #36a829;
-  color: #36a829;
+  left: 50%;
+}
+
+.toggles [type="checkbox"]:checked + label::before {
+  left: auto;
+  background-color: #52B788;
+}
+
+.toggles [type="checkbox"]:focus + label::before {
+  outline-color: #52B788;
+  outline-offset: 1px;
+  outline-style: solid;
+  outline-width: 2px;
 }
 /*# sourceMappingURL=main.css.map */
