@@ -1,4 +1,4 @@
-.toggles [type="checkbox"] {
+.toggles [type=checkbox] {
     position: absolute;
     opacity: 0;
 
@@ -18,7 +18,7 @@
         transition: left $animationDuration ease-in;
     }
 
-    // ::before is the toggle
+    // background
     & + label::before {
         width: 100%;
         background-color: $lightColor;
@@ -26,7 +26,7 @@
         box-shadow: inset 0px 0px 2px 0px;
     }
 
-    // ::after is the slider
+    // slider
     & + label::after {
         left: 0;
         background-color: #fff;
@@ -39,11 +39,11 @@
         left: 50%;
     }
     &:checked + label::before {
-        left: auto;
         background-color: $primaryColor;;
     }
 
-    &:focus + label::before {
+    &:focus + label::before,
+    &:hover + label::before {
         @include focus;
     }
 }

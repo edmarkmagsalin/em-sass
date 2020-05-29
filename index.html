@@ -9,19 +9,29 @@
 </head>
 <body data-theme="default">
     <header>
-        <div class="container-fluid">
-            <div class="logo">
-                <img src="./assets/images/logo.png" alt="EM"> EM
-            </div>
-            <nav class="main-nav">
-                <ul class="main-nav__menu">
-                    <li class="main-nav__items"><a href="#">Portfolio</a></li>
-                    <li class="main-nav__items"><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <img src="./assets/images/logo.png" alt="EM"> EM
         </div>
+        <nav class="main-nav">
+            <ul class="main-nav__menu">
+                <li class="main-nav__items"><a href="#">Portfolio</a></li>
+                <li class="main-nav__items"><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
+        <section>
+            <div class="container">
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+                <p>Paragraph</p>
+                <blockquote>blockquote</blockquote>
+            </div>
+        </section>
         <section>
             <div class="container">
                 <ul>
@@ -38,36 +48,24 @@
         </section>
         <section>
             <div class="container">
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-                <p>Paragraph</p>
-                <blockquote>blockquote</blockquote>
-            </div>
-        </section>
-        <section>
-            <div class="container">
                 <div class="toggles">
                     <input type="checkbox" name="darkmode" id="darkmode">
                     <label for="darkmode"></label>
                 </div>
                 <form action="get">
                     <div>
-                        <label for="username">Username:</label>
-                        <input type="text" name="username" id="username" required>
+                        <input type="text" name="username" id="username" placeholder="Username" required>
                     </div>
                     <div>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
                     </div>
-                    <input type="password" name="password" required>
-                    <input type="password" name="password2" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password2" placeholder="Confirm Password" required>
         
-                    <input type="text" name="first-name">
-                    <input type="text" name="last-name">
+                    <input type="text" name="first-name" placeholder="First name" required>
+                    <input type="text" name="last-name" placeholder="Last name" required>
+
+                    <input type="number" name="age" placeholder="Age">
         
                     <input type="month" name="birth-month">
                     <input type="week" name="birth-week">
@@ -76,6 +74,7 @@
                     
                     <input type="file" name="image">
                     <input type="color" name="favorite-color">
+
                     <input type="radio" name="gender" value="male">
                     <input type="radio" name="gender" value="female">
                     <input type="checkbox" name="agree">

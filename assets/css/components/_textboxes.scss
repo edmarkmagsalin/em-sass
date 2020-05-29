@@ -1,0 +1,24 @@
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+input[type=month],
+input[type=week],
+input[type=date],
+input[type=time]
+{
+    padding: .5em 0;
+    margin: 0.5em;
+    font-size: 1em;
+    background-color: transparent;
+    color: var(--color);
+    border: 0;
+    border-bottom: 2px solid var(--color);
+    transition: border $animationDuration ease-in-out;
+
+    &:focus {
+        outline: none;
+        border-bottom: 2px solid $primaryColor;
+        caret-color: $primaryColor;
+    }
+}

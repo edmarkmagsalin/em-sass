@@ -15,11 +15,11 @@ $breakpoints: (
 );
 
 :root,
-[data-theme="default"] {
+[data-theme=default] {
   --backgroundColor: #{$lightColor};
   --color: #{$darkColor};
 }
-[data-theme="dark"] {
+[data-theme=dark] {
   --backgroundColor: #{$darkColor};
   --color: #{$lightColor};
 }

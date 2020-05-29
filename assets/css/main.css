@@ -1,10 +1,10 @@
 :root,
-[data-theme="default"] {
+[data-theme=default] {
   --backgroundColor: #f2f2f2;
   --color: #0d0d0d;
 }
 
-[data-theme="dark"] {
+[data-theme=dark] {
   --backgroundColor: #0d0d0d;
   --color: #f2f2f2;
 }
@@ -13,7 +13,6 @@ body {
   margin: 0;
   background-color: var(--backgroundColor);
   color: var(--color);
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
@@ -39,8 +38,6 @@ body {
 
 header > nav > ul {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0;
 }
@@ -55,13 +52,8 @@ header > nav > ul > li > a {
 footer > nav > ul {
   font-weight: bold;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 0;
 }
 
@@ -75,30 +67,22 @@ footer > nav > ul > li > a:hover {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 1px 1px 1px #52B788;
 }
 
 footer {
-  margin-top: 2em;
+  display: flex;
   background-color: #52B788;
-  padding: 3em 0;
+  padding: 2em 1em;
 }
 
 .logo {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -126,12 +110,12 @@ input[type=button]:hover {
   background-color: #64be94;
 }
 
-.toggles [type="checkbox"] {
+.toggles [type=checkbox] {
   position: absolute;
   opacity: 0;
 }
 
-.toggles [type="checkbox"] + label {
+.toggles [type=checkbox] + label {
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -139,47 +123,74 @@ input[type=button]:hover {
   height: 1.5em;
 }
 
-.toggles [type="checkbox"] + label::before,
-.toggles [type="checkbox"] + label::after {
+.toggles [type=checkbox] + label::before,
+.toggles [type=checkbox] + label::after {
   content: "";
   position: absolute;
   height: 100%;
-  -webkit-transition: left 0.4s ease-in;
   transition: left 0.4s ease-in;
 }
 
-.toggles [type="checkbox"] + label::before {
+.toggles [type=checkbox] + label::before {
   width: 100%;
   background-color: #f2f2f2;
   border-radius: 1.1em;
-  -webkit-box-shadow: inset 0px 0px 2px 0px;
-          box-shadow: inset 0px 0px 2px 0px;
+  box-shadow: inset 0px 0px 2px 0px;
 }
 
-.toggles [type="checkbox"] + label::after {
+.toggles [type=checkbox] + label::after {
   left: 0;
   background-color: #fff;
   border-radius: 50%;
   width: 50%;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  -webkit-box-shadow: 1px 1px 5px 1px #0d0d0d;
-          box-shadow: 1px 1px 5px 1px #0d0d0d;
+  transform: scale(0.8);
+  box-shadow: 1px 1px 5px 1px #0d0d0d;
 }
 
-.toggles [type="checkbox"]:checked + label::after {
+.toggles [type=checkbox]:checked + label::after {
   left: 50%;
 }
 
-.toggles [type="checkbox"]:checked + label::before {
-  left: auto;
+.toggles [type=checkbox]:checked + label::before {
   background-color: #52B788;
 }
 
-.toggles [type="checkbox"]:focus + label::before {
+.toggles [type=checkbox]:focus + label::before,
+.toggles [type=checkbox]:hover + label::before {
   outline-color: #52B788;
   outline-offset: 1px;
   outline-style: solid;
   outline-width: 2px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+input[type=month],
+input[type=week],
+input[type=date],
+input[type=time] {
+  padding: .5em 0;
+  margin: 0.5em;
+  font-size: 1em;
+  background-color: transparent;
+  color: var(--color);
+  border: 0;
+  border-bottom: 2px solid var(--color);
+  transition: border 0.4s ease-in-out;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input[type=month]:focus,
+input[type=week]:focus,
+input[type=date]:focus,
+input[type=time]:focus {
+  outline: none;
+  border-bottom: 2px solid #52B788;
+  caret-color: #52B788;
 }
 /*# sourceMappingURL=main.css.map */
