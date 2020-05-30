@@ -1,0 +1,44 @@
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+        flex-basis: 100%;
+    }
+}
+
+.flex-b-3 {
+    flex-basis: 25%;
+}
+
+.flex-b-6 {
+    flex-basis: 50%;
+}
+
+.flex-b-9 {
+    flex-basis: 75%;
+}
+
+.flex-b-12 {
+    flex-basis: 100%;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+}

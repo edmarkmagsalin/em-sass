@@ -6,8 +6,8 @@
         display: inline-block;
         position: relative;
         cursor: pointer;
-        width: 3em;
-        height: 1.5em;
+        width: 3rem;
+        height: 1.5rem;
     }
     
     & + label::before,
@@ -22,7 +22,7 @@
     & + label::before {
         width: 100%;
         background-color: $lightColor;
-        border-radius: 1.1em;
+        border-radius: 1.1rem;
         box-shadow: inset 0px 0px 2px 0px;
     }
 

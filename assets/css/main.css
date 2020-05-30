@@ -1,12 +1,16 @@
 :root,
 [data-theme=default] {
   --backgroundColor: #f2f2f2;
-  --color: #0d0d0d;
+  --color: #404040;
 }
 
 [data-theme=dark] {
-  --backgroundColor: #0d0d0d;
+  --backgroundColor: #404040;
   --color: #f2f2f2;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -27,24 +31,84 @@ a:hover {
 
 :focus {
   outline-color: #52B788;
-  outline-offset: 1px;
   outline-style: solid;
-  outline-width: 2px;
+  outline-width: 1px;
+}
+
+textarea {
+  min-height: 3em;
+  font-family: inherit;
 }
 
 body {
   font-family: sans-serif;
 }
 
-header > nav > ul {
-  list-style: none;
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.flex {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.flex > * {
+  flex-basis: 100%;
+}
+
+.flex-b-3 {
+  flex-basis: 25%;
+}
+
+.flex-b-6 {
+  flex-basis: 50%;
+}
+
+.flex-b-9 {
+  flex-basis: 75%;
+}
+
+.flex-b-12 {
+  flex-basis: 100%;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left {
+  margin-right: auto;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.main-nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-header > nav > ul > li > a {
+.main-nav > ul > li > * {
   font-weight: bold;
-  padding: .5em 1em;
+  padding: .5rem;
   display: block;
   color: #52B788;
 }
@@ -67,11 +131,15 @@ footer > nav > ul > li > a:hover {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  box-shadow: 1px 1px 1px #52B788;
+  background-color: red;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  background-color: silver;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 footer {
@@ -80,34 +148,43 @@ footer {
   padding: 2em 1em;
 }
 
-.logo {
-  display: inline-flex;
+.logo a {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
+  color: inherit;
   font-weight: bold;
 }
 
-.logo > img {
+.logo a > img {
   width: 50px;
+  margin-right: .5rem;
 }
 
-button,
-input[type=submit],
-input[type=reset],
-input[type=button] {
-  background-color: #52B788;
-  border: 1px solid #52B788;
-  color: #f2f2f2;
-  border-radius: 1em;
-  padding: 1em 1.5em;
-  cursor: pointer;
+.cover {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
 }
 
-button:hover,
-input[type=submit]:hover,
-input[type=reset]:hover,
-input[type=button]:hover {
-  background-color: #64be94;
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
 }
 
 .toggles [type=checkbox] {
@@ -119,8 +196,8 @@ input[type=button]:hover {
   display: inline-block;
   position: relative;
   cursor: pointer;
-  width: 3em;
-  height: 1.5em;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .toggles [type=checkbox] + label::before,
@@ -134,7 +211,7 @@ input[type=button]:hover {
 .toggles [type=checkbox] + label::before {
   width: 100%;
   background-color: #f2f2f2;
-  border-radius: 1.1em;
+  border-radius: 1.1rem;
   box-shadow: inset 0px 0px 2px 0px;
 }
 
@@ -144,7 +221,7 @@ input[type=button]:hover {
   border-radius: 50%;
   width: 50%;
   transform: scale(0.8);
-  box-shadow: 1px 1px 5px 1px #0d0d0d;
+  box-shadow: 1px 1px 5px 1px #404040;
 }
 
 .toggles [type=checkbox]:checked + label::after {
@@ -158,9 +235,8 @@ input[type=button]:hover {
 .toggles [type=checkbox]:focus + label::before,
 .toggles [type=checkbox]:hover + label::before {
   outline-color: #52B788;
-  outline-offset: 1px;
   outline-style: solid;
-  outline-width: 2px;
+  outline-width: 1px;
 }
 
 input[type=text],
@@ -170,7 +246,8 @@ input[type=number],
 input[type=month],
 input[type=week],
 input[type=date],
-input[type=time] {
+input[type=time],
+textarea {
   padding: .5em 0;
   margin: 0.5em;
   font-size: 1em;
@@ -188,9 +265,33 @@ input[type=number]:focus,
 input[type=month]:focus,
 input[type=week]:focus,
 input[type=date]:focus,
-input[type=time]:focus {
-  outline: none;
+input[type=time]:focus,
+textarea:focus {
+  outline: transparent;
   border-bottom: 2px solid #52B788;
   caret-color: #52B788;
+}
+
+button,
+.btn,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  background-color: #52B788;
+  border: 1px solid #52B788;
+  color: #f2f2f2;
+  border-radius: 1em;
+  padding: 1em 1.5em;
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover {
+  background-color: #64be94;
+  border-color: #64be94;
+  color: #f2f2f2;
 }
 /*# sourceMappingURL=main.css.map */

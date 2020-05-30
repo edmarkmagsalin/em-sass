@@ -1,18 +1,20 @@
 @charset 'utf-8';
 
+// color scheme
 $primaryColor: #52B788;
 $secondaryColor: #e5989b;
-$darkColor: lighten(#000000, 5);
+$darkColor: lighten(#000000, 25);
+$greyColor: lighten(#808080, 25);
 $lightColor: darken(#FFFFFF, 5);
 $animationDuration: .4s;
 $spacing: 1em;
 
-$breakpoints: (
-  'small': (min-width: 576px),
-  'medium': (min-width: 768px),
-  'large': (min-width: 992px),
-  'extra-large': (min-width: 1200px),
-);
+// screen sizes
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extraLarge: 1200px;
+
 
 :root,
 [data-theme=default] {
