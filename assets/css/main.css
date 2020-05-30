@@ -22,15 +22,15 @@ body {
 
 a {
   text-decoration: none;
-  color: #52B788;
+  color: #2ac52a;
 }
 
 a:hover {
-  color: #64be94;
+  color: #35d435;
 }
 
 :focus {
-  outline-color: #52B788;
+  outline-color: #2ac52a;
   outline-style: solid;
   outline-width: 1px;
 }
@@ -94,7 +94,9 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
+  background-color: var(--background-color);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .main-nav > ul {
@@ -110,7 +112,7 @@ body {
   font-weight: bold;
   padding: .5rem;
   display: block;
-  color: #52B788;
+  color: #2ac52a;
 }
 
 footer > nav > ul {
@@ -131,7 +133,11 @@ footer > nav > ul > li > a:hover {
 }
 
 header {
-  background-color: red;
+  background-color: transparent;
+}
+
+main {
+  background-color: rgba(64, 64, 64, 0.5);
 }
 
 form {
@@ -144,7 +150,7 @@ form {
 
 footer {
   display: flex;
-  background-color: #52B788;
+  background-color: #2ac52a;
   padding: 2em 1em;
 }
 
@@ -173,7 +179,7 @@ footer {
 }
 
 video {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   min-width: 100%;
@@ -229,12 +235,12 @@ video {
 }
 
 .toggles [type=checkbox]:checked + label::before {
-  background-color: #52B788;
+  background-color: #2ac52a;
 }
 
 .toggles [type=checkbox]:focus + label::before,
 .toggles [type=checkbox]:hover + label::before {
-  outline-color: #52B788;
+  outline-color: #2ac52a;
   outline-style: solid;
   outline-width: 1px;
 }
@@ -268,8 +274,8 @@ input[type=date]:focus,
 input[type=time]:focus,
 textarea:focus {
   outline: transparent;
-  border-bottom: 2px solid #52B788;
-  caret-color: #52B788;
+  border-bottom: 2px solid #2ac52a;
+  caret-color: #2ac52a;
 }
 
 button,
@@ -277,8 +283,8 @@ button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
-  background-color: #52B788;
-  border: 1px solid #52B788;
+  background-color: #2ac52a;
+  border: 1px solid #2ac52a;
   color: #f2f2f2;
   border-radius: 1em;
   padding: 1em 1.5em;
@@ -290,8 +296,8 @@ button:hover,
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover {
-  background-color: #64be94;
-  border-color: #64be94;
+  background-color: #35d435;
+  border-color: #35d435;
   color: #f2f2f2;
 }
 /*# sourceMappingURL=main.css.map */
