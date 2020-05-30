@@ -39,7 +39,7 @@
         left: 50%;
     }
     &:checked + label::before {
-        background-color: $primaryColor;;
+        background-color: $darkColor;
     }
 
     &:focus + label::before,

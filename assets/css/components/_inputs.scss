@@ -9,9 +9,9 @@ input[type=date],
 input[type=time],
 textarea
 {
-    padding: .5em 0;
-    margin: 0.5em;
-    font-size: 1em;
+    padding: .5rem 0;
+    margin: 0.5rem;
+    font-size: 1rem;
     background-color: transparent;
     color: var(--color);
     border: 0;
@@ -31,11 +31,12 @@ button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
+    font-size: 1rem;
     background-color: $primaryColor;
     border: 1px solid $primaryColor;
     color: $lightColor;
-    border-radius: 1em;
-    padding: 1em 1.5em;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
     cursor: pointer;
 
     &:hover {
