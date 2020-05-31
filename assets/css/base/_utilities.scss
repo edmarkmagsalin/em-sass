@@ -5,6 +5,12 @@
     padding: 1em;
 }
 
+.m-hide {
+    @media (max-width: $small) {
+        display: none;
+    }
+}
+
 .flex {
     @include flexWrapCenter;
 }
