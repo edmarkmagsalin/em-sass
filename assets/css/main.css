@@ -159,6 +159,7 @@ header {
 
 main {
   background-color: var(--backgroundColor);
+  padding: 1em;
 }
 
 form {
@@ -334,13 +335,13 @@ input[type=button]:hover {
 
 .top-label {
   position: relative;
+  padding-bottom: .5rem;
 }
 
 .top-label > label {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: .5rem;
   font-size: .6rem;
-  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */
