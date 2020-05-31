@@ -9,38 +9,40 @@
 </head>
 <body data-theme="default">
     <header>
-        <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+        <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" playsinline autoplay muted loop>
             <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
             <source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
         </video>
         
         <nav class="main-nav">
-            <ul>
-                <li>
-                    <div class="logo">
-                        <a href="./"><img src="./assets/images/logo.png" alt="EM"> EM SASS</a>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li>
-                    <div class="toggles">
-                        <input type="checkbox" name="darkmode" id="darkmode">
-                        <label for="darkmode"></label>
-                    </div>
-                </li>
-            </ul>
+            <div class="container">
+                <ul>
+                    <li>
+                        <div class="logo">
+                            <a href="./"><img src="./assets/images/logo.png" alt="EM"> EM SASS</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li>
+                        <div class="toggles">
+                            <input type="checkbox" name="darkmode" id="darkmode">
+                            <label for="darkmode"></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
-        <div class="cover">
-            <div>
-                <h1>Title</h1>
+        <section class="cover">
+            <div class="container">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, quia?</h1>
+                <a href="#" class="btn">Contact Us</a>
             </div>
-            <a href="#" class="btn">Contact Us</a>
-        </div>
+        </section>
     </header>
     <main>
         <section>
@@ -73,31 +75,75 @@
         </section>
         <section>
             <div class="container">
-                <form action="./" method="get" class="flex center">
-                    <h2>Contact Us</h2>
-                    <div class="input-new-ui">
-                        <input type="text" name="username" id="username" placeholder="Username" required>
+                <form action="./" method="get" class="flex mx">
+                    <h2 class="mx">Contact Us</h2>
+
+                    <div class="top-label">
+                        <input type="text" name="username" id="username" required>
                         <label for="username">Username</label>
                     </div>
-                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <div class="top-label">
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
 
-                    <input type="password" name="password" placeholder="Password" required>
-                    <input type="password" name="password2" placeholder="Confirm Password" required>
+                    <div class="top-label">
+                        <input type="password" name="password" id="password" required>
+                        <label for="password">Password</label>
+                    </div>
+
+                    <div class="top-label">
+                        <input type="password" name="password2" id="password2" required>
+                        <label for="password2">Confirm password</label>
+                    </div>
+
+                    <div class="top-label">
+                        <input type="text" name="first_name" id="first_name" required>
+                        <label for="first_name">First name</label>
+                    </div>
+
+                    <div class="top-label">
+                        <input type="text" name="last_name" id="last_name" required>
+                        <label for="last_name">Last name</label>
+                    </div>
+
+                    <div class="top-label">
+                        <input type="number" name="age" id="age" required>
+                        <label for="age">Age</label>
+                    </div>
+
+                    <div class="top-label">
+                        <input type="month" name="birth_month" id="birth_month" required>
+                        <label for="birth_month">Birth month</label>
+                    </div>
                     
-                    <input type="text" name="first_name" placeholder="First name" required>
-                    <input type="text" name="last_name" placeholder="Last name" required>
-
-                    <input type="number" name="age" placeholder="Age" required>
-        
-                    <input type="month" name="birth_month" placeholder="Birth month" required>
-                    <input type="week" name="birth_week" placeholder="Birth week" required>
-                    <input type="date" name="birth_date" placeholder="Birth date" required>
-                    <input type="time" name="birth_time" placeholder="Birth time" required>
+                    <div class="top-label">
+                        <input type="week" name="birth_week" id="birth_week" required>
+                        <label for="birth_week">Birth Week</label>
+                    </div>
                     
-                    <input type="file" name="attachement" placeholder="Attachment" required>
-                    <input type="color" name="favorite_color" placeholder="Favorite color" required>
+                    <div class="top-label">
+                        <input type="date" name="birth_date" id="birth_date" required>
+                        <label for="birth_date">Birth date</label>
+                    </div>
 
-                    <textarea name="description" cols="30" rows="2" placeholder="Brief description about you" maxlength="300"></textarea>
+                    <div class="top-label">
+                        <input type="time" name="birth_time" id="birth_time" required>
+                        <label for="birth_time">Birth time</label>
+                    </div>
+                    
+                    <div class="top-label">
+                        <input type="file" name="attachment" id="attachment" required>
+                    </div>
+                    
+                    <div class="top-label">
+                        <input type="color" name="favorite_color" required>
+                    </div>
+
+                    <div class="top-label">
+                        <textarea name="description" id="description" cols="30" rows="2" maxlength="300"></textarea>
+                        <label for="descriptio">Description</label>
+                    </div>
 
                     <div>
                         <input type="radio" name="gender" id="gender_male" value="male">
@@ -121,13 +167,17 @@
         </section>
     </main>
     <footer>
-        <nav>
-            <ul>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+        <nav class="secondary-nav">
+            <div>
+                <ul>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
         </nav>
-        <small>Copyright &copy; 2020 Edmark Magsalin</small>
+        <section>
+            <small>Copyright &copy; 2020 Edmark Magsalin</small>
+        </section>
     </footer>
 </body>
 </html>

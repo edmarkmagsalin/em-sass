@@ -6,12 +6,7 @@
 }
 
 .flex {
-    display: flex;
-    flex-wrap: wrap;
-
-    & > * {
-        flex-basis: 100%;
-    }
+    @include flexWrapCenter;
 }
 
 .flex-b-3 {
@@ -30,15 +25,15 @@
     flex-basis: 100%;
 }
 
-.center {
+.mx {
     margin-left: auto;
     margin-right: auto;
 }
 
-.left {
+.ml {
     margin-right: auto;
 }
 
-.right {
+.mr {
     margin-left: auto;
 }

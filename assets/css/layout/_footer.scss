@@ -1,5 +1,6 @@
 footer {
-    display: flex;
+    @include flexWrapCenter;
     background-color: $primaryColor;
     padding: 2em 1em;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 }

@@ -1,19 +1,23 @@
-.main-nav {
-    @include flexWrapCenter;
-    justify-content: space-between;
-    
-    background-color: var(--background-color);
+header > nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.5); 
+    background-color: transparentize($lightColor, .5);
 
-    & > ul {
+    & > div {
+        @include flexWrapCenter;
+        justify-content: space-between;
+    }
+
+    & > div > ul {
         @include flexWrapCenter;
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    & > ul > li > * {
+    & > div > ul > li > * {
         font-weight: bold;
         padding: .5rem;
         display: block;
@@ -21,16 +25,21 @@
     }
 }
 
-footer > nav > ul {
-    font-weight: bold;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    & > li > a{
+footer > nav {
+    flex: 1;
+    & > div > ul {
+        @include flexWrapCenter;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    & > div > ul > li > * {
+        font-weight: bold;
+        padding: .5rem;
+        display: block;
         color: $lightColor;
     }
-    & > li > a:hover{
+    & > div > ul > li > a:hover{
         text-decoration: underline;
         color: $lightColor;
     }

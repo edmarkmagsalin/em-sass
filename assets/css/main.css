@@ -14,7 +14,12 @@
 }
 
 body {
+  font-family: sans-serif;
   margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: var(--backgroundColor);
   color: var(--color);
   transition: all 0.2s ease-in-out;
@@ -40,10 +45,6 @@ textarea {
   font-family: inherit;
 }
 
-body {
-  font-family: sans-serif;
-}
-
 .container {
   width: 100%;
   max-width: 900px;
@@ -54,10 +55,7 @@ body {
 .flex {
   display: flex;
   flex-wrap: wrap;
-}
-
-.flex > * {
-  flex-basis: 100%;
+  align-items: center;
 }
 
 .flex-b-3 {
@@ -76,30 +74,35 @@ body {
   flex-basis: 100%;
 }
 
-.center {
+.mx {
   margin-left: auto;
   margin-right: auto;
 }
 
-.left {
+.ml {
   margin-right: auto;
 }
 
-.right {
+.mr {
   margin-left: auto;
 }
 
-.main-nav {
+header > nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(242, 242, 242, 0.5);
+}
+
+header > nav > div {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--background-color);
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.main-nav > ul {
+header > nav > div > ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -108,36 +111,48 @@ body {
   margin: 0;
 }
 
-.main-nav > ul > li > * {
+header > nav > div > ul > li > * {
   font-weight: bold;
   padding: .5rem;
   display: block;
   color: #2ac52a;
 }
 
-footer > nav > ul {
-  font-weight: bold;
-  list-style: none;
+footer > nav {
+  flex: 1;
+}
+
+footer > nav > div > ul {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-footer > nav > ul > li > a {
+footer > nav > div > ul > li > * {
+  font-weight: bold;
+  padding: .5rem;
+  display: block;
   color: #f2f2f2;
 }
 
-footer > nav > ul > li > a:hover {
+footer > nav > div > ul > li > a:hover {
   text-decoration: underline;
   color: #f2f2f2;
 }
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: transparent;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
 }
 
 main {
-  background-color: rgba(64, 64, 64, 0.5);
+  background-color: var(--backgroundColor);
 }
 
 form {
@@ -150,8 +165,11 @@ form {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: #2ac52a;
   padding: 2em 1em;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .logo a {
@@ -176,6 +194,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   min-height: 400px;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.cover > * {
+  padding: 1em;
 }
 
 video {
@@ -186,11 +210,11 @@ video {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%, -50%);
   background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
   background-size: cover;
-  transition: 1s opacity;
+  background-color: rgba(64, 64, 64, 0.5);
+  z-index: -100;
 }
 
 .toggles [type=checkbox] {
@@ -300,5 +324,17 @@ input[type=button]:hover {
   background-color: #35d435;
   border-color: #35d435;
   color: #f2f2f2;
+}
+
+.top-label {
+  position: relative;
+}
+
+.top-label > label {
+  position: absolute;
+  top: 0;
+  left: .5rem;
+  font-size: .6rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */
