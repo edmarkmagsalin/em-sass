@@ -17,6 +17,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  font-variant: no-common-ligatures;
   margin: 0;
   height: 100vh;
   width: 100%;
