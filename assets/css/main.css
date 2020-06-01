@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 :root,
 [data-theme=default] {
   --backgroundColor: #f2f2f2;
@@ -10,18 +11,25 @@
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
   height: 100vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: var(--backgroundColor);
   color: var(--color);
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -59,25 +67,34 @@ textarea {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex-b-3 {
-  flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
 }
 
 .flex-b-6 {
-  flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 .flex-b-9 {
-  flex-basis: 75%;
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
 }
 
 .flex-b-12 {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .mx {
@@ -97,21 +114,34 @@ header > nav {
   position: fixed;
   top: 0;
   width: 100%;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   background-color: rgba(242, 242, 242, 0.5);
 }
 
 header > nav > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header > nav > div > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -125,13 +155,20 @@ header > nav > div > ul > li > * {
 }
 
 footer > nav {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 footer > nav > div > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -150,11 +187,17 @@ footer > nav > div > ul > li > a:hover {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: transparent;
-  clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
 }
 
 main {
@@ -171,18 +214,29 @@ form {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #2a9d8f;
   padding: 2em 1em;
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.5rem;
   color: inherit;
   font-weight: bold;
@@ -194,12 +248,23 @@ footer {
 }
 
 .cover {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 400px;
   padding: 1rem 2rem;
   text-align: center;
@@ -217,7 +282,8 @@ video {
   min-height: 100%;
   width: auto;
   height: auto;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
   background-size: cover;
   background-color: rgba(64, 64, 64, 0.5);
@@ -242,6 +308,7 @@ video {
   content: "";
   position: absolute;
   height: 100%;
+  -webkit-transition: left 0.2s ease-in;
   transition: left 0.2s ease-in;
 }
 
@@ -249,7 +316,8 @@ video {
   width: 100%;
   background-color: #f2f2f2;
   border-radius: 1.1rem;
-  box-shadow: inset 0px 0px 2px 0px;
+  -webkit-box-shadow: inset 0px 0px 2px 0px;
+          box-shadow: inset 0px 0px 2px 0px;
 }
 
 .toggles [type=checkbox] + label::after {
@@ -257,8 +325,10 @@ video {
   background-color: #fff;
   border-radius: 50%;
   width: 50%;
-  transform: scale(0.8);
-  box-shadow: 1px 1px 5px 1px #404040;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-box-shadow: 1px 1px 5px 1px #404040;
+          box-shadow: 1px 1px 5px 1px #404040;
 }
 
 .toggles [type=checkbox]:checked + label::after {
@@ -292,6 +362,7 @@ textarea {
   color: var(--color);
   border: 0;
   border-bottom: 2px solid var(--color);
+  -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
 }
 
