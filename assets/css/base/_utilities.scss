@@ -5,6 +5,14 @@
     padding: 1em;
 }
 
+.bg {
+    background-color: var(--backgroundColor);
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
 .m-hide {
     @media (max-width: $small) {
         display: none;
@@ -42,4 +50,8 @@
 
 .mr {
     margin-left: auto;
+}
+
+.p-1 {
+    padding: 1rem;
 }
