@@ -6,9 +6,15 @@
     min-height: 400px;
     padding: 1rem 2rem;
     text-align: center;
+    background-color: transparentize($darkColor, .5);
 
-    & > div> * {
+    & > div > * {
         margin: 1em auto;
+    }
+
+    & h1 {
+        color: $primaryColor;
+        font-size: 2rem;
     }
 }
 
@@ -21,7 +27,7 @@ video {
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background: url('../../assets/images/bg.jpg') no-repeat;
     background-size: cover;
     background-color: transparentize($darkColor, .5);
     z-index: -100;
