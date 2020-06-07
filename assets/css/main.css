@@ -403,6 +403,7 @@ header > nav {
   top: 0;
   width: 100%;
   backdrop-filter: blur(10px);
+  z-index: 99;
 }
 
 header > nav > div {
@@ -458,7 +459,6 @@ header {
   flex-wrap: wrap;
   align-items: center;
   background-color: transparent;
-  clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
 }
 
 main {
@@ -468,7 +468,6 @@ main {
 form {
   width: 100%;
   max-width: 600px;
-  background-color: silver;
   border-radius: 1rem;
   padding: 1rem;
 }
@@ -478,7 +477,6 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   background-color: #2a9d8f;
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .logo a {
@@ -506,6 +504,7 @@ footer {
   padding: 1rem 2rem;
   text-align: center;
   background-color: rgba(64, 64, 64, 0.5);
+  margin-top: 68.15px;
 }
 
 .cover > div > * {

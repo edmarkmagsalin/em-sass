@@ -3,6 +3,7 @@ header > nav {
     top: 0;
     width: 100%;
     backdrop-filter: blur(10px);
+    z-index: 99;
 
     & > div {
         @include flexWrapCenter;

@@ -7,6 +7,9 @@
     padding: 1rem 2rem;
     text-align: center;
     background-color: transparentize($darkColor, .5);
+    
+    // nav height
+    margin-top: 68.15px;
 
     & > div > * {
         margin: 1em auto;
