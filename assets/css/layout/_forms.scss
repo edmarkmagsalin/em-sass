@@ -3,4 +3,11 @@ form {
     max-width: 600px;
     border-radius: 1rem;
     padding: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color);
+
+    & > div {
+        width: 100%;
+        max-width: 350px;
+    }
 }
