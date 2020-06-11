@@ -33,15 +33,15 @@ body {
 
 a {
   text-decoration: none;
-  color: #2a9d8f;
+  color: #0088ff;
 }
 
 a:hover {
-  color: #2fb1a1;
+  color: #1a94ff;
 }
 
 :focus {
-  outline-color: #2a9d8f;
+  outline-color: #0088ff;
   outline-style: solid;
   outline-width: 1px;
 }
@@ -427,7 +427,7 @@ header > nav > div > ul > li > * {
   font-weight: bold;
   padding: .5rem;
   display: block;
-  color: #2a9d8f;
+  color: #0088ff;
 }
 
 footer > nav {
@@ -519,7 +519,7 @@ footer {
 }
 
 .cover h1 {
-  color: #2a9d8f;
+  color: #0088ff;
   font-size: 2rem;
   text-shadow: 3px 3px 10px #0d0d0d;
 }
@@ -586,7 +586,7 @@ video {
 
 .toggles [type=checkbox]:focus + label::before,
 .toggles [type=checkbox]:hover + label::before {
-  outline-color: #2a9d8f;
+  outline-color: #0088ff;
   outline-style: solid;
   outline-width: 1px;
 }
@@ -622,9 +622,9 @@ input[type=date]:focus,
 input[type=time]:focus,
 textarea:focus {
   outline: transparent;
-  border-bottom: 2px solid #2a9d8f;
-  caret-color: #2a9d8f;
-  background-color: rgba(42, 157, 143, 0.2);
+  border-bottom: 2px solid #0088ff;
+  caret-color: #0088ff;
+  background-color: rgba(0, 136, 255, 0.2);
 }
 
 .btn,
@@ -632,8 +632,8 @@ button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
-  background-color: #2a9d8f;
-  border: 1px solid #2a9d8f;
+  background-color: #0088ff;
+  border: 1px solid #0088ff;
   color: #f2f2f2;
   border-radius: 2rem;
   padding: .5rem 1.5rem;
@@ -645,8 +645,8 @@ button:hover,
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover {
-  background-color: #2fb1a1;
-  border-color: #2fb1a1;
+  background-color: #1a94ff;
+  border-color: #1a94ff;
   color: #f2f2f2;
 }
 
