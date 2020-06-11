@@ -11,7 +11,7 @@ textarea
 {
     width: 100%;
     max-width: 350px;
-    padding: .5rem 0;
+    padding: .5rem;
     margin: 0.5rem 0;
     font-size: 1.2rem;
     background-color: transparent;
@@ -24,6 +24,7 @@ textarea
         outline: transparent;
         border-bottom: 2px solid $primaryColor;
         caret-color: $primaryColor;
+        background-color: transparentize($primaryColor, .8);
     }
 }
 
@@ -59,7 +60,7 @@ input[type=radio] {
     & > label {
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: .5rem;
         font-size: .6rem;
     }
 }

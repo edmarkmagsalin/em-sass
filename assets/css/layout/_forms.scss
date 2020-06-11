@@ -6,12 +6,9 @@ form {
     backdrop-filter: blur(10px);
     border: 1px solid var(--color);
 
-    & > div {
+    & > * {
         width: 100%;
         max-width: 350px;
-    }
-
-    & > * {
         margin-bottom: 1rem;
     }
 }
