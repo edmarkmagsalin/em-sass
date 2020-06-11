@@ -12,8 +12,8 @@ textarea
     width: 100%;
     max-width: 350px;
     padding: .5rem 0;
-    margin: 0.5rem;
-    font-size: 1rem;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
     background-color: transparent;
     color: var(--color);
     border: 0;
@@ -33,7 +33,6 @@ button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
-    font-size: 1rem;
     background-color: $primaryColor;
     border: 1px solid $primaryColor;
     color: $lightColor;
@@ -48,14 +47,19 @@ input[type=button] {
     }
 }
 
-.top-label {
+input[type=checkbox],
+input[type=radio] {
+    cursor: pointer;
+}
+
+.labeled-input {
     position: relative;
     padding-bottom: .5rem;
 
     & > label {
         position: absolute;
         bottom: 0;
-        left: .5rem;
+        left: 0;
         font-size: .6rem;
     }
 }

@@ -2,11 +2,11 @@
 :root,
 [data-theme=default] {
   --backgroundColor: #f2f2f2;
-  --color: #404040;
+  --color: #0d0d0d;
 }
 
 [data-theme=dark] {
-  --backgroundColor: #404040;
+  --backgroundColor: #0d0d0d;
   --color: #f2f2f2;
 }
 
@@ -468,7 +468,7 @@ main {
 
 form {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   border-radius: 1rem;
   padding: 1rem;
   backdrop-filter: blur(10px);
@@ -480,11 +480,14 @@ form > div {
   max-width: 350px;
 }
 
+form > * {
+  margin-bottom: 1rem;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background-color: #2a9d8f;
 }
 
 .logo a {
@@ -511,7 +514,6 @@ footer {
   min-height: 400px;
   padding: 1rem 2rem;
   text-align: center;
-  background-color: rgba(64, 64, 64, 0.5);
   margin-top: 68.15px;
 }
 
@@ -522,6 +524,7 @@ footer {
 .cover h1 {
   color: #2a9d8f;
   font-size: 2rem;
+  text-shadow: 3px 3px 10px #0d0d0d;
 }
 
 video {
@@ -535,7 +538,7 @@ video {
   transform: translate(-50%, -50%);
   background: url("../../assets/images/bg.jpg") no-repeat;
   background-size: cover;
-  background-color: rgba(64, 64, 64, 0.5);
+  background-color: rgba(13, 13, 13, 0.5);
   z-index: -100;
 }
 
@@ -573,7 +576,7 @@ video {
   border-radius: 50%;
   width: 50%;
   transform: scale(0.8);
-  box-shadow: 1px 1px 5px 1px #404040;
+  box-shadow: 1px 1px 5px 1px #0d0d0d;
 }
 
 .toggles [type=checkbox]:checked + label::after {
@@ -581,7 +584,7 @@ video {
 }
 
 .toggles [type=checkbox]:checked + label::before {
-  background-color: #404040;
+  background-color: #0d0d0d;
 }
 
 .toggles [type=checkbox]:focus + label::before,
@@ -603,8 +606,8 @@ textarea {
   width: 100%;
   max-width: 350px;
   padding: .5rem 0;
-  margin: 0.5rem;
-  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
   background-color: transparent;
   color: var(--color);
   border: 0;
@@ -631,7 +634,6 @@ button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
-  font-size: 1rem;
   background-color: #2a9d8f;
   border: 1px solid #2a9d8f;
   color: #f2f2f2;
@@ -650,15 +652,20 @@ input[type=button]:hover {
   color: #f2f2f2;
 }
 
-.top-label {
+input[type=checkbox],
+input[type=radio] {
+  cursor: pointer;
+}
+
+.labeled-input {
   position: relative;
   padding-bottom: .5rem;
 }
 
-.top-label > label {
+.labeled-input > label {
   position: absolute;
   bottom: 0;
-  left: .5rem;
+  left: 0;
   font-size: .6rem;
 }
 /*# sourceMappingURL=main.css.map */

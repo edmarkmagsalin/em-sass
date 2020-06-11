@@ -1,6 +1,6 @@
 form {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     border-radius: 1rem;
     padding: 1rem;
     backdrop-filter: blur(10px);
@@ -9,5 +9,9 @@ form {
     & > div {
         width: 100%;
         max-width: 350px;
+    }
+
+    & > * {
+        margin-bottom: 1rem;
     }
 }
