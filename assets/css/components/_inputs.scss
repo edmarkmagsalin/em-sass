@@ -59,8 +59,17 @@ input[type=radio] {
 
     & > label {
         position: absolute;
-        bottom: 0;
         left: .5rem;
+        transition: all $animationDuration ease-in-out;
+        bottom: 0;
         font-size: .6rem;
+    }
+
+    & > input[type=text].place-label + label,
+    & > input[type=email].place-label + label,
+    & > input[type=password].place-label + label,
+    & > input[type=number].place-label + label {
+        bottom: 1.5rem;
+        font-size: 1.2rem;
     }
 }
