@@ -63,6 +63,7 @@ input[type=radio] {
         transition: all $animationDuration ease-in-out;
         bottom: 0;
         font-size: .6rem;
+        opacity: 1;
     }
 
     & > input[type=text].place-label + label,
@@ -71,5 +72,6 @@ input[type=radio] {
     & > input[type=number].place-label + label {
         bottom: 1.5rem;
         font-size: 1.2rem;
+        opacity: 0.5;
     }
 }
