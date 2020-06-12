@@ -46,6 +46,11 @@ a:hover {
   outline-width: 1px;
 }
 
+::selection {
+  background-color: #ff7700;
+  color: var(--backgroundColor);
+}
+
 textarea {
   min-height: 2em;
   max-width: 350px;
