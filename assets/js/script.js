@@ -14,7 +14,7 @@ switchTheme = () => {
 toggle.addEventListener('input', switchTheme);
 
 // place label
-const labeledInputs = document.querySelectorAll('.labeled-input > input[type=text], .labeled-input > input[type=email], .labeled-input > input[type=password], .labeled-input > input[type=number]');
+const labeledInputs = document.querySelectorAll('.labeled-input > input[type=text], .labeled-input > input[type=email], .labeled-input > input[type=password], .labeled-input > input[type=number], .labeled-input > textarea');
 
 function placeLabel () {
     if(this.value) {
@@ -30,3 +30,20 @@ labeledInputs.forEach(labeledInput => {
     labeledInput.addEventListener('focus', placeLabel);
     labeledInput.addEventListener('input', placeLabel);
 });
+
+//animation on scroll
+const animateFadeUpElements = document.querySelectorAll('.animate-fade-up');
+
+animate = () => {
+    animateFadeUpElements.forEach(animateFadeUpElement => {
+       if(animateFadeUpElement.getBoundingClientRect().top < window.scrollY+window.screen.height/2) {
+           animateFadeUpElement.classList.remove('start');
+       } else {
+        animateFadeUpElement.classList.add('start');
+       }
+       console.log(animateFadeUpElement);
+       console.log(animateFadeUpElement.getBoundingClientRect(), window.scrollY+window.screen.height/2);
+    })
+}
+animate();
+window.addEventListener('scroll', animate)

@@ -28,6 +28,13 @@ textarea
     }
 }
 
+//checkbox
+input[type=checkbox],
+input[type=radio] {
+    width: 1rem;
+    height: 1rem;
+}
+
 // buttons
 .btn,
 button,
@@ -60,18 +67,21 @@ input[type=radio] {
     & > label {
         position: absolute;
         left: .5rem;
-        transition: all $animationDuration ease-in-out;
-        bottom: 0;
+        top: calc(100% - 1rem);
         font-size: .6rem;
         opacity: 1;
+        cursor: default;
+        transition: all $animationDuration ease-in-out;
     }
 
     & > input[type=text].place-label + label,
     & > input[type=email].place-label + label,
     & > input[type=password].place-label + label,
-    & > input[type=number].place-label + label {
-        bottom: 1.5rem;
+    & > input[type=password].place-label + label,
+    & > textarea.place-label + label {
+        top: 1rem;
         font-size: 1.2rem;
         opacity: 0.5;
+        cursor: text;
     }
 }
