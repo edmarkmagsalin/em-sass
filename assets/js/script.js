@@ -32,18 +32,35 @@ labeledInputs.forEach(labeledInput => {
 });
 
 //animation on scroll
-const animateFadeUpElements = document.querySelectorAll('.animate-fade-up');
+const afuElements = document.querySelectorAll('.animate-fade-up');
+afuElements.forEach(afuElement => {
+    afuElement.classList.add('start');
+    console.log(afuElement.offsetTop);
+    console.log('top: ', afuElement.getBoundingClientRect().top);
+    console.log('bottom: ', afuElement.getBoundingClientRect().bottom);
+    console.log('left: ', afuElement.getBoundingClientRect().left);
+    console.log('right: ', afuElement.getBoundingClientRect().right);
+    console.log('height: ', afuElement.getBoundingClientRect().height);
+    console.log('width: ', afuElement.getBoundingClientRect().width);
+    console.log('scrollY: ', window.scrollY);
+    console.log('innerHeight: ', window.innerHeight);
+    console.log('----------------------');
+})
 
-animate = () => {
-    animateFadeUpElements.forEach(animateFadeUpElement => {
-       if(animateFadeUpElement.getBoundingClientRect().top < window.scrollY+window.screen.height/2) {
-           animateFadeUpElement.classList.remove('start');
-       } else {
-        animateFadeUpElement.classList.add('start');
-       }
-       console.log(animateFadeUpElement);
-       console.log(animateFadeUpElement.getBoundingClientRect(), window.scrollY+window.screen.height/2);
+
+function loadAnimation () {
+    afuElements.forEach(afuElement => {
+        console.log(afuElement.offsetTop);
+        console.log('top: ', afuElement.getBoundingClientRect().top);
+        console.log('bottom: ', afuElement.getBoundingClientRect().bottom);
+        console.log('left: ', afuElement.getBoundingClientRect().left);
+        console.log('right: ', afuElement.getBoundingClientRect().right);
+        console.log('height: ', afuElement.getBoundingClientRect().height);
+        console.log('width: ', afuElement.getBoundingClientRect().width);
+        console.log('scrollY: ', window.scrollY);
+        console.log('innerHeight: ', window.innerHeight);
+        console.log('----------------------');
+        afuElement.classList.remove('start');
     })
 }
-animate();
-window.addEventListener('scroll', animate)
+window.addEventListener('load', loadAnimation)
