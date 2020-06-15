@@ -36,10 +36,10 @@
             </div>
         </nav>
 
-        <section class="cover fade-up">
+        <section class="cover">
             <div class="container">
-                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, quia?</h1>
-                <a href="#form-section" class="btn">Contact Us</a>
+                <h1 class="fade-up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, quia?</h1>
+                <a href="#form-section" class="btn fade-right">Contact Us</a>
             </div>
         </section>
     </header>
@@ -58,7 +58,7 @@
             </div>
         </section>
         <section class="bg py-1">
-            <div class="container fade-up">
+            <div class="container">
                 <h2>Heading 2</h2>
                 <ul>
                     <li>Item 1</li>
@@ -74,7 +74,7 @@
         </section>
         <section id="form-section" class="bg pb-4 pt-2">
             <div class="container">
-                <form action="./" method="get" class="f f-column mx">
+                <form action="./" method="get" class="f f-column mx fade-left">
                     <h2 class="t-center">Contact Us</h2>
 
                     <small class="t-left">Basic information</small>
@@ -146,6 +146,11 @@
                     <div class="labeled-input">
                         <textarea name="description" id="description" cols="30" rows="2" maxlength="300"></textarea>
                         <label for="description">Description</label>
+                    </div>
+
+                    <div class="labeled-input">
+                        <input type="text" name="first_name" id="first_name" required>
+                        <label for="first_name">First name</label>
                     </div>
 
                     <div>

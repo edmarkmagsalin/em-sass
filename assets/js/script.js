@@ -1,39 +1,3 @@
-//animation on scroll
-const fadeUpElements = document.querySelectorAll('.fade-up');
-fadeUpElements.forEach(fadeUpElement => {
-    fadeUpElement.classList.remove('transition');
-    fadeUpElement.classList.add('start');
-})
-
-function loadAnimation () {
-    fadeUpElements.forEach(fadeUpElement => {
-        fadeUpElement.classList.add('transition');
-        if(fadeUpElement.getBoundingClientRect().top < window.innerHeight/1.5) {
-            fadeUpElement.classList.remove('start');
-        }
-    })
-}
-function animate () {
-    fadeUpElements.forEach(fadeUpElement => {
-        if(fadeUpElement.getBoundingClientRect().top < window.innerHeight/1.5) {
-            fadeUpElement.classList.remove('start');
-        } 
-        console.log('initial distance from top: ', fadeUpElement.offsetTop);
-        console.log('top: ', fadeUpElement.getBoundingClientRect().top);
-        console.log('bottom: ', fadeUpElement.getBoundingClientRect().bottom);
-        console.log('height: ', fadeUpElement.getBoundingClientRect().height);
-        console.log('width: ', fadeUpElement.getBoundingClientRect().width);
-        console.log('scrollY: ', window.scrollY);
-        console.log('innerHeight: ', window.innerHeight);
-        console.log('innerHeight/1.5: ', window.innerHeight/1.5);
-        console.log('----------------------');
-    })
-}
-
-window.addEventListener('load', loadAnimation)
-window.addEventListener('scroll', animate)
-window.addEventListener('resize', animate)
-
 // dark mode togggle
 const toggle = document.querySelector('#darkmode');
 setTheme = () => {
@@ -52,7 +16,7 @@ toggle.addEventListener('input', switchTheme);
 // place label
 const labeledInputs = document.querySelectorAll('.labeled-input > input[type=text], .labeled-input > input[type=email], .labeled-input > input[type=password], .labeled-input > input[type=number], .labeled-input > textarea');
 
-function placeLabel () {
+function placeLabel() {
     if(this.value) {
         this.classList.remove('place-label');
     }
@@ -66,3 +30,24 @@ labeledInputs.forEach(labeledInput => {
     labeledInput.addEventListener('focus', placeLabel);
     labeledInput.addEventListener('input', placeLabel);
 });
+
+//animation on scroll
+const fadeElements = document.querySelectorAll('.fade-up, .fade-down, .fade-left, .fade-right');
+
+fadeElements.forEach(fadeElement => {
+    fadeElement.classList.add('start');
+})
+
+function animate() {
+    fadeElements.forEach(fadeElement => {
+        fadeElement.classList.add('transition');
+        if(fadeElement.getBoundingClientRect().top < window.innerHeight/1.5) {
+            fadeElement.classList.remove('start');
+        }
+        console.log(fadeElement.getBoundingClientRect().top, window.innerHeight/1.5);
+    })
+}
+
+window.addEventListener('scroll', animate)
+window.addEventListener('resize', animate)
+window.addEventListener('load', animate)

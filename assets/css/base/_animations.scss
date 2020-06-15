@@ -9,3 +9,24 @@
         transform: translateY(100px);
     }
 }
+
+.fade-down {
+    &.start {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+.fade-left {
+    &.start {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+.fade-right {
+    &.start {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}

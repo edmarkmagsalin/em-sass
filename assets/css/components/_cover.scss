@@ -6,13 +6,7 @@
     min-height: 400px;
     padding: 1rem 2rem;
     text-align: center;
-    
-    // nav height
-    margin-top: 68.15px;
-
-    & > div > * {
-        margin: 1em auto;
-    }
+    margin-top: $fixNavHeight;
 
     & h1 {
         color: $primaryColor;

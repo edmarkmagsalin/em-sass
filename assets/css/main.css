@@ -11,8 +11,7 @@
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -25,16 +24,10 @@ body {
   margin: 0;
   height: 100vh;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: var(--color);
   background-color: var(--backgroundColor);
-  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
@@ -53,34 +46,40 @@ a:hover {
   outline-width: 1px;
 }
 
-::-moz-selection {
-  background-color: #ff7700;
-  color: var(--backgroundColor);
-}
-
 ::selection {
   background-color: #ff7700;
   color: var(--backgroundColor);
 }
 
 textarea {
-  min-height: 2em;
+  min-height: 2rem;
   min-width: 100%;
   max-width: 350px;
   font-family: inherit;
 }
 
 .transition {
-  -webkit-transition: opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  transition: opacity 1s ease-in-out, -webkit-transform 0.5s ease-in-out;
   transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
-  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .fade-up.start {
   opacity: 0;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
+  transform: translateY(100px);
+}
+
+.fade-down.start {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.fade-left.start {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.fade-right.start {
+  opacity: 0;
+  transform: translateX(100px);
 }
 
 .container {
@@ -124,41 +123,29 @@ textarea {
 }
 
 .f {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .f-column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .f-b-3 {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+  flex-basis: 25%;
 }
 
 .f-b-6 {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  flex-basis: 50%;
 }
 
 .f-b-9 {
-  -ms-flex-preferred-size: 75%;
-      flex-basis: 75%;
+  flex-basis: 75%;
 }
 
 .f-b-12 {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 .w-100 {
@@ -446,34 +433,21 @@ header > nav {
   position: fixed;
   top: 0;
   width: 100%;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   z-index: 99;
 }
 
 header > nav > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header > nav > div > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -491,14 +465,9 @@ footer > nav {
 }
 
 footer > nav > div > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -517,21 +486,14 @@ footer > nav > div > ul > li > a:hover {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: transparent;
 }
 
 main {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 
 form {
@@ -539,8 +501,7 @@ form {
   max-width: 500px;
   border-radius: 1rem;
   padding: 1rem;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--color);
 }
 
@@ -551,25 +512,15 @@ form > * {
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .logo a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   font-size: 1.5rem;
   color: inherit;
   font-weight: bold;
@@ -581,31 +532,16 @@ footer {
 }
 
 .cover {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-basis: 100%;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   min-height: 400px;
   padding: 1rem 2rem;
   text-align: center;
   margin-top: 68.15px;
-}
-
-.cover > div > * {
-  margin: 1em auto;
 }
 
 .cover h1 {
@@ -622,8 +558,7 @@ video {
   min-height: 100%;
   width: auto;
   height: auto;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background: url("../../assets/images/bg.jpg") no-repeat;
   background-size: cover;
   background-color: rgba(13, 13, 13, 0.5);
@@ -648,7 +583,6 @@ video {
   content: "";
   position: absolute;
   height: 100%;
-  -webkit-transition: left 0.25s ease-in;
   transition: left 0.25s ease-in;
 }
 
@@ -656,8 +590,7 @@ video {
   width: 100%;
   background-color: #f2f2f2;
   border-radius: 1.1rem;
-  -webkit-box-shadow: inset 0px 0px 2px 0px;
-          box-shadow: inset 0px 0px 2px 0px;
+  box-shadow: inset 0px 0px 2px 0px;
 }
 
 .toggles [type=checkbox] + label::after {
@@ -665,10 +598,8 @@ video {
   background-color: #fff;
   border-radius: 50%;
   width: 50%;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  -webkit-box-shadow: 1px 1px 5px 1px #0d0d0d;
-          box-shadow: 1px 1px 5px 1px #0d0d0d;
+  transform: scale(0.8);
+  box-shadow: 1px 1px 5px 1px #0d0d0d;
 }
 
 .toggles [type=checkbox]:checked + label::after {
@@ -704,7 +635,6 @@ textarea {
   color: var(--color);
   border: 0;
   border-bottom: 2px solid var(--color);
-  -webkit-transition: border 0.25s ease-in-out;
   transition: border 0.25s ease-in-out;
 }
 
@@ -734,6 +664,7 @@ button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
+  display: inline-block;
   background-color: #0088ff;
   border: 1px solid #0088ff;
   color: #f2f2f2;
@@ -765,18 +696,17 @@ input[type=radio] {
 .labeled-input > label {
   position: absolute;
   left: .5rem;
-  top: calc(100% - 1rem);
+  top: calc(100% - .8rem);
   font-size: .6rem;
   opacity: 1;
   cursor: default;
-  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
 .labeled-input > input[type=text].place-label + label,
 .labeled-input > input[type=email].place-label + label,
 .labeled-input > input[type=password].place-label + label,
-.labeled-input > input[type=password].place-label + label,
+.labeled-input > input[type=number].place-label + label,
 .labeled-input > textarea.place-label + label {
   top: 1rem;
   font-size: 1.2rem;

@@ -41,6 +41,7 @@ button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
+    display: inline-block;
     background-color: $primaryColor;
     border: 1px solid $primaryColor;
     color: $lightColor;
@@ -67,7 +68,7 @@ input[type=radio] {
     & > label {
         position: absolute;
         left: .5rem;
-        top: calc(100% - 1rem);
+        top: calc(100% - .8rem);
         font-size: .6rem;
         opacity: 1;
         cursor: default;
@@ -77,7 +78,7 @@ input[type=radio] {
     & > input[type=text].place-label + label,
     & > input[type=email].place-label + label,
     & > input[type=password].place-label + label,
-    & > input[type=password].place-label + label,
+    & > input[type=number].place-label + label,
     & > textarea.place-label + label {
         top: 1rem;
         font-size: 1.2rem;
