@@ -1,6 +1,9 @@
-.animate-fade-up {
-    transition: opacity $animationDuration*6 ease-in-out,
-                transform $animationDuration ease-in-out;
+.transition {
+    transition: opacity $slowDuration ease-in-out,
+                transform $normalDuration ease-in-out;
+}
+
+.fade-up {
     &.start {
         opacity: 0;
         transform: translateY(100px);

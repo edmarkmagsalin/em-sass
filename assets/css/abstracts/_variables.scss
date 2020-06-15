@@ -7,7 +7,11 @@ $secondaryColor: #e5989b;
 $darkColor: lighten(#000000, 5);
 $greyColor: lighten(#808080, 25);
 $lightColor: darken(#FFFFFF, 5);
-$animationDuration: .2s;
+
+$slowDuration: 1s;
+$normalDuration: .5s;
+$fastDuration: .25s;
+
 $spacing: 1em;
 
 // screen sizes

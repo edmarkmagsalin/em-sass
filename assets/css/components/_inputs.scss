@@ -18,7 +18,7 @@ textarea
     color: var(--color);
     border: 0;
     border-bottom: 2px solid var(--color);
-    transition: border $animationDuration ease-in-out;
+    transition: border $fastDuration ease-in-out;
 
     &:focus {
         outline: transparent;
@@ -71,7 +71,7 @@ input[type=radio] {
         font-size: .6rem;
         opacity: 1;
         cursor: default;
-        transition: all $animationDuration ease-in-out;
+        transition: all $fastDuration ease-in-out;
     }
 
     & > input[type=text].place-label + label,

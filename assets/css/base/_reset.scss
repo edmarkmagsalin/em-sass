@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     color: var(--color);
     background-color: var(--backgroundColor);
-    transition: all $animationDuration ease-in-out;
+    transition: all $fastDuration ease-in-out;
 }
 
 a {
