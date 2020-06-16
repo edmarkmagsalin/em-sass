@@ -1,0 +1,8 @@
+blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.5rem 2rem;
+    border-left: .5rem solid $primaryColor;
+    overflow-wrap: break-word;
+    background-color: transparentize($primaryColor, .8);
+}

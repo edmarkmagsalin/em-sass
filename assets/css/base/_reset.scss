@@ -16,6 +16,7 @@ body {
     flex-direction: column;
     color: var(--color);
     background-color: var(--backgroundColor);
+    overflow-x: hidden;
     transition: all $fastDuration ease-in-out;
 }
 

@@ -8,10 +8,14 @@
 
 .bg {
     background-color: var(--backgroundColor);
-}
 
-.bg-transparent {
-    background-color: transparent;
+    &-transparent {
+        background-color: transparent;
+    }
+    
+    &-blur {
+        backdrop-filter: blur(10px);
+    }
 }
 
 .sm-hide {
@@ -39,7 +43,19 @@
 }
 
 .f {
-    @include flexWrapCenter;
+    display: flex;
+
+    &-inline {
+        display: inline-flex;
+    }
+    
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-center {
+        align-items: center;
+    }
 
     &-column {
         flex-direction: column;
