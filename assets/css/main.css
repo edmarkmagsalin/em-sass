@@ -147,54 +147,23 @@ textarea {
   }
 }
 
-.f {
+.three-column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.f-inline {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.f-wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-.f-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.f-column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.f-b-3 {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-}
-
-.f-b-6 {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-
-.f-b-9 {
-  -ms-flex-preferred-size: 75%;
-      flex-basis: 75%;
-}
-
-.f-b-12 {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+.three-column > * {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  padding: 1rem;
 }
 
 .w-100 {
@@ -238,6 +207,15 @@ textarea {
   margin-right: auto;
 }
 
+.m-0 {
+  margin: 0;
+}
+
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .mx-1 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -256,6 +234,11 @@ textarea {
 .mx-4 {
   margin-left: 4rem;
   margin-right: 4rem;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .my-1 {
@@ -358,6 +341,15 @@ textarea {
   margin-left: 4rem;
 }
 
+.p-0 {
+  padding: 0;
+}
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .px-1 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -376,6 +368,11 @@ textarea {
 .px-4 {
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .py-1 {
@@ -834,7 +831,6 @@ blockquote {
   border-radius: 1rem;
   background-color: transparent;
   padding: 1rem;
-  margin: 1rem;
   text-align: center;
   -webkit-box-shadow: 1px 1px 5px var(--color);
           box-shadow: 1px 1px 5px var(--color);

@@ -40,11 +40,14 @@ fadeElements.forEach(fadeElement => {
 
 function animate() {
     fadeElements.forEach(fadeElement => {
+        let triggerPoint = fadeElement.getBoundingClientRect().top;
         fadeElement.classList.add('transition');
-        if(fadeElement.getBoundingClientRect().top < window.innerHeight/1.5) {
+        if(fadeElement.classList.contains('fade-up')) {
+            triggerPoint-=100;
+        }
+        if(triggerPoint < window.innerHeight/1.5) {
             fadeElement.classList.remove('start');
         }
-        console.log(fadeElement.getBoundingClientRect().top, window.innerHeight/1.5);
     })
 }
 
