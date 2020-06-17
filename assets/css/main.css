@@ -110,6 +110,14 @@ textarea {
   padding-right: 1rem;
 }
 
+.color-primary {
+  color: #0088ff;
+}
+
+.color-secondary {
+  color: #e5989b;
+}
+
 .bg {
   background-color: var(--backgroundColor);
 }

@@ -31,7 +31,7 @@ labeledInputs.forEach(labeledInput => {
     labeledInput.addEventListener('input', placeLabel);
 });
 
-//animation on scroll
+//animation
 const fadeElements = document.querySelectorAll('.fade-up, .fade-down, .fade-left, .fade-right');
 
 fadeElements.forEach(fadeElement => {
@@ -42,12 +42,8 @@ function animate() {
     fadeElements.forEach(fadeElement => {
         let triggerPoint = fadeElement.getBoundingClientRect().top;
         fadeElement.classList.add('transition');
-        if(fadeElement.classList.contains('fade-up')) {
-            triggerPoint-=100;
-        }
-        if(triggerPoint < window.innerHeight/1.5) {
-            fadeElement.classList.remove('start');
-        }
+        fadeElement.classList.contains('fade-up') && triggerPoint==triggerPoint-100
+        triggerPoint < window.innerHeight/1.5 && fadeElement.classList.remove('start')
     })
 }
 
