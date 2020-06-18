@@ -15,12 +15,9 @@ body {
     display: flex;
     flex-direction: column;
     color: var(--color);
+    overflow-x: hidden;
     background-color: var(--backgroundColor);
     transition: all $fastDuration ease-in-out;
-}
-
-body > * {
-    overflow-x: hidden;
 }
 
 a {
