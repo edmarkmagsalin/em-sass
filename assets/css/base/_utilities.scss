@@ -24,6 +24,18 @@
     &-blur {
         backdrop-filter: blur(10px);
     }
+
+    &-overlay {
+        background-color: transparentize($greyColor, .5);
+    }
+
+    &-img1-overlay {
+        background: linear-gradient(transparentize($primaryColor, .2), transparentize($primaryColor, .2)),
+                    url('../../assets/images/img1.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .sm-hide {
@@ -50,10 +62,24 @@
     }
 }
 
+.two-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    & > * {
+        flex-basis: 50%;
+        padding: 1rem;
+    }
+}
+
 .three-column {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding: 0;
 
     & > * {
@@ -62,14 +88,15 @@
     }
 }
 
-.two-column {
+.four-column {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding: 0;
 
     & > * {
-        flex-basis: 50%;
+        flex-basis: 25%;
         padding: 1rem;
     }
 }
