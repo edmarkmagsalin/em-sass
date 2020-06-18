@@ -34,7 +34,6 @@ body {
           flex-direction: column;
   color: var(--color);
   background-color: var(--backgroundColor);
-  overflow-x: hidden;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
