@@ -576,7 +576,11 @@ header > nav > div > ul {
 
 @media (max-width: 768px) {
   header > nav > div > ul:nth-child(2) {
-    background-color: red;
+    background-color: var(--backgroundColor);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
   }
 }
 
