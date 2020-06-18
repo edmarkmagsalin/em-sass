@@ -33,6 +33,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   color: var(--color);
+  overflow-x: hidden;
   background-color: var(--backgroundColor);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -571,6 +572,12 @@ header > nav > div > ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  header > nav > div > ul:nth-child(2) {
+    background-color: red;
+  }
 }
 
 header > nav > div > ul > li > * {

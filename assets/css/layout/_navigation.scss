@@ -16,6 +16,16 @@ header > nav {
         margin: 0;
     }
 
+    & > div > ul:nth-child(2) {
+        @media (max-width: $md) {
+            background-color: var(--backgroundColor);
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+
     & > div > ul > li > * {
         font-weight: bold;
         padding: .5rem;
