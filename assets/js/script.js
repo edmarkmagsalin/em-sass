@@ -35,6 +35,7 @@ labeledInputs.forEach(labeledInput => {
 const fadeElements = document.querySelectorAll('.fade-up, .fade-down, .fade-left, .fade-right');
 
 fadeElements.forEach(fadeElement => {
+    fadeElement.parentElement.classList.add('overflow-h');
     fadeElement.classList.add('start');
 })
 
