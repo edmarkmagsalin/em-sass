@@ -44,10 +44,58 @@ function animate() {
         let triggerPoint = fadeElement.getBoundingClientRect().top;
         fadeElement.classList.add('transition');
         fadeElement.classList.contains('fade-up') && triggerPoint==triggerPoint-100
-        triggerPoint < window.innerHeight/1.5 && fadeElement.classList.remove('start')
+        if(triggerPoint < window.innerHeight/1.5){
+            fadeElement.classList.remove('start');
+            fadeElement.parentElement.classList.remove('overflow-h');
+            if(!fadeElement.parentElement.classList.values) {
+                fadeElement.parentElement.removeAttribute('class');
+            }
+        }
     })
 }
 
 window.addEventListener('scroll', animate)
 window.addEventListener('resize', animate)
 window.addEventListener('load', animate)
+
+// validate form
+
+const form = document.querySelector('form');
+// const requiredFields = document.querySelectorAll('form input[required]');
+const requiredFields = document.querySelectorAll('form input, form textarea');
+
+function handleFormSubmition(e) {
+    e.preventDefault();
+    validateBlankField();
+}
+
+function validateBlankField() {
+    requiredFields.forEach(requiredField => {
+        if(!requiredField.value) {
+            console.log('required field not fulfilled');
+            requiredField.classList.add('error');
+            return false;
+        } else {
+            requiredField.classList.remove('error');
+        }
+    });
+}
+
+function comparePassword() {
+    requiredFields.forEach(requiredField => {
+        if(requiredField.getAttribute) {
+            console.log('required field not fulfilled');
+            requiredField.classList.add('error');
+            return false;
+        } else {
+            requiredField.classList.remove('error');
+        }
+    });
+}
+
+
+form.addEventListener('submit', (e) => {handleFormSubmition(e)});
+
+requiredFields.forEach(requiredField => {
+    requiredField.addEventListener('input', validateBlankField)
+});

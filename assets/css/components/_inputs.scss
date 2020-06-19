@@ -26,6 +26,11 @@ textarea
         caret-color: $primaryColor;
         background-color: transparentize($primaryColor, .8);
     }
+
+    &.error {
+        border-bottom: 2px solid $dangerColor;
+        background-color: transparentize($dangerColor, .8);
+    }
 }
 
 //checkbox

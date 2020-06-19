@@ -44,6 +44,106 @@
         </section>
     </header>
     <main>
+        <section id="form-section">
+            <div class="container">
+                <form action="#" method="get" class="fade-down">
+                    <h2>Register</h2>
+
+                    <small>Basic information</small>
+                    <div class="labeled-input">
+                        <input type="text" name="username" id="username">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="labeled-input">
+                        <input type="email" name="email" id="email">
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="labeled-input">
+                        <input type="password" name="password" id="password">
+                        <label for="password">Password</label>
+                    </div>
+
+                    <div class="labeled-input">
+                        <input type="password" name="password2" id="password2">
+                        <label for="password2">Confirm password</label>
+                    </div>
+
+                    <div class="labeled-input">
+                        <input type="text" name="first_name" id="first_name">
+                        <label for="first_name">First name</label>
+                    </div>
+
+                    <div class="labeled-input">
+                        <input type="text" name="last_name" id="last_name">
+                        <label for="last_name">Last name</label>
+                    </div>
+
+                    <div class="labeled-input">
+                        <input type="number" name="age" id="age" min="18" max="300">
+                        <label for="age">Age</label>
+                    </div>
+
+                    
+
+                    <small>Advance information</small>
+                    <div class="labeled-input">
+                        <input type="month" name="birth_month" id="birth_month">
+                        <label for="birth_month">Birth month</label>
+                    </div>
+                    
+                    <div class="labeled-input">
+                        <input type="week" name="birth_week" id="birth_week">
+                        <label for="birth_week">Birth Week</label>
+                    </div>
+                    
+                    <div class="labeled-input">
+                        <input type="date" name="birth_date" id="birth_date">
+                        <label for="birth_date">Birth date</label>
+                    </div>
+
+                    <div class="labeled-input">
+                        <input type="time" name="birth_time" id="birth_time">
+                        <label for="birth_time">Birth time</label>
+                    </div>
+                    
+                    <div class="labeled-input">
+                        <input type="file" name="attachment" id="attachment">
+                    </div>
+                    
+                    <div class="labeled-input">
+                        <input type="color" name="favorite_color">
+                    </div>
+
+                    <div class="labeled-input">
+                        <textarea name="description" id="description" cols="30" rows="2" maxlength="300"></textarea>
+                        <label for="description">Description</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="gender" id="gender_male" value="male">
+                        <label for="gender_male">Male</label>
+                        
+                        <input type="radio" name="gender" id="gender_female" value="female">
+                        <label for="gender_female">Female</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="agree" id="agree">
+                        <label for="agree">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aperiam nam corporis doloremque qui possimus harum. Fugit qui iste recusandae. Eius soluta alias minus, ex exercitationem tempora voluptates explicabo provident.</label>
+                    </div>
+                    <div>
+                        <input type="submit">
+                        <input type="reset">
+                    </div>
+                    <div>
+                        <input type="button" value="Button input">
+                    </div>
+                    <div>
+                        <button>Button tag</button>
+                    </div>
+                </form>
+            </div>
+        </section>
         <section>
             <div class="container">
                 <h1>Heading 1</h1>
@@ -149,111 +249,6 @@
             <div class="container">
                 <h2 class="t-center">Heading 2</h2>
                 <p class="t-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis vel nulla dolor, itaque aut omnis!</p>
-            </div>
-        </section>
-        <section id="form-section">
-            <div class="container">
-                <form action="./" method="get" class="fade-down">
-                    <h2>Register</h2>
-
-                    <small>Basic information</small>
-                    <div class="labeled-input">
-                        <input type="text" name="username" id="username" required>
-                        <label for="username">Username</label>
-                    </div>
-                    <div class="labeled-input">
-                        <input type="email" name="email" id="email" required>
-                        <label for="email">Email</label>
-                    </div>
-
-                    <div class="labeled-input">
-                        <input type="password" name="password" id="password" required>
-                        <label for="password">Password</label>
-                    </div>
-
-                    <div class="labeled-input">
-                        <input type="password" name="password2" id="password2" required>
-                        <label for="password2">Confirm password</label>
-                    </div>
-
-                    <div class="labeled-input">
-                        <input type="text" name="first_name" id="first_name" required>
-                        <label for="first_name">First name</label>
-                    </div>
-
-                    <div class="labeled-input">
-                        <input type="text" name="last_name" id="last_name" required>
-                        <label for="last_name">Last name</label>
-                    </div>
-
-                    <div class="labeled-input">
-                        <input type="number" name="age" id="age" min="18" max="300" required>
-                        <label for="age">Age</label>
-                    </div>
-
-                    
-
-                    <small>Advance information</small>
-                    <div class="labeled-input">
-                        <input type="month" name="birth_month" id="birth_month" required>
-                        <label for="birth_month">Birth month</label>
-                    </div>
-                    
-                    <div class="labeled-input">
-                        <input type="week" name="birth_week" id="birth_week" required>
-                        <label for="birth_week">Birth Week</label>
-                    </div>
-                    
-                    <div class="labeled-input">
-                        <input type="date" name="birth_date" id="birth_date" required>
-                        <label for="birth_date">Birth date</label>
-                    </div>
-
-                    <div class="labeled-input">
-                        <input type="time" name="birth_time" id="birth_time" required>
-                        <label for="birth_time">Birth time</label>
-                    </div>
-                    
-                    <div class="labeled-input">
-                        <input type="file" name="attachment" id="attachment" required>
-                    </div>
-                    
-                    <div class="labeled-input">
-                        <input type="color" name="favorite_color" required>
-                    </div>
-
-                    <div class="labeled-input">
-                        <textarea name="description" id="description" cols="30" rows="2" maxlength="300"></textarea>
-                        <label for="description">Description</label>
-                    </div>
-
-                    <div class="labeled-input">
-                        <input type="text" name="first_name" id="first_name" required>
-                        <label for="first_name">First name</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" name="gender" id="gender_male" value="male">
-                        <label for="gender_male">Male</label>
-                        
-                        <input type="radio" name="gender" id="gender_female" value="female">
-                        <label for="gender_female">Female</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="agree" id="agree">
-                        <label for="agree">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aperiam nam corporis doloremque qui possimus harum. Fugit qui iste recusandae. Eius soluta alias minus, ex exercitationem tempora voluptates explicabo provident.</label>
-                    </div>
-                    <div>
-                        <input type="submit">
-                        <input type="reset">
-                    </div>
-                    <div>
-                        <input type="button" value="Button input">
-                    </div>
-                    <div>
-                        <button>Button tag</button>
-                    </div>
-                </form>
             </div>
         </section>
     </main>
