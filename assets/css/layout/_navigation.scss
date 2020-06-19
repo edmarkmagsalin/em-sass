@@ -20,9 +20,13 @@ header > nav {
         @media (max-width: $md) {
             background-color: var(--backgroundColor);
             position: fixed;
+            top: 100vh;
             left: 0;
-            bottom: 0;
+            transform: translateY(-$fixNavHeight);
+            justify-content: center;
             width: 100%;
+            height: $fixNavHeight;
+            border-top: 1px solid $primaryColor;
         }
     }
 

@@ -578,9 +578,16 @@ header > nav > div > ul {
   header > nav > div > ul:nth-child(2) {
     background-color: var(--backgroundColor);
     position: fixed;
+    top: 100vh;
     left: 0;
-    bottom: 0;
+    -webkit-transform: translateY(-68.15px);
+            transform: translateY(-68.15px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
+    height: 68.15px;
+    border-top: 1px solid #0088ff;
   }
 }
 
@@ -668,6 +675,12 @@ form h2 {
 
 body > footer {
   padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  body > footer {
+    margin-bottom: 68.15px;
+  }
 }
 
 .logo a {
