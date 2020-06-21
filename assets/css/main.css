@@ -780,6 +780,19 @@ textarea:focus {
   background-color: rgba(0, 136, 255, 0.2);
 }
 
+input[type=text].pass,
+input[type=email].pass,
+input[type=password].pass,
+input[type=number].pass,
+input[type=month].pass,
+input[type=week].pass,
+input[type=date].pass,
+input[type=time].pass,
+textarea.pass {
+  border-bottom: 2px solid #00ff22;
+  background-color: rgba(0, 255, 34, 0.2);
+}
+
 input[type=text].error,
 input[type=email].error,
 input[type=password].error,

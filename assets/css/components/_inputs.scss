@@ -27,9 +27,14 @@ textarea
         background-color: transparentize($primaryColor, .8);
     }
 
+    &.pass {
+        border-bottom: 2px solid $goColor;
+        background-color: transparentize($goColor, .8);
+    }
+
     &.error {
-        border-bottom: 2px solid $dangerColor;
-        background-color: transparentize($dangerColor, .8);
+        border-bottom: 2px solid $stopColor;
+        background-color: transparentize($stopColor, .8);
     }
 }
 
