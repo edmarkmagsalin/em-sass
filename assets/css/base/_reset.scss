@@ -32,7 +32,7 @@ a {
 }
 
 ::selection {
-    background-color: adjust-hue($primaryColor, 180deg);
+    background-color: $secondaryColor;
     color: var(--backgroundColor);
 }
 

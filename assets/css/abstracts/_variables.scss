@@ -2,11 +2,11 @@
 
 // color scheme
 // $primaryColor: #2a9d8f;
-$primaryColor: #0088ff;
-$secondaryColor: #709cc2;
-$goColor: #00ff22;
-$readyColor: #ff8800;
-$stopColor: #ff0000;
+$primaryColor: #5cbdbd;
+$secondaryColor: adjust-hue($primaryColor, 180deg);
+$goColor: #52aa52;
+$readyColor: #b67c4d;
+$stopColor: #e93a3a;
 $darkColor: lighten(#000000, 5);
 $greyColor: lighten(#808080, 25);
 $lightColor: darken(#FFFFFF, 5);

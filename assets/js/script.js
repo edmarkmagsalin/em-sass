@@ -62,14 +62,18 @@ window.addEventListener('load', animate)
 /************
 - on blur and on change should just check the validity not if it has value
 - submit should check validity and if the required fields has value
+- when editing password, validate only on blur and submission
+- password comparison is only activated when all password involved has value
 ************/
 
 const form = document.querySelector('form');
-const requiredFields = document.querySelectorAll('form input, form textarea');
-let passwordFields = document.querySelectorAll('form input[name=password], form input[name=password2]');
+const requiredFields = document.querySelectorAll('form input[type=text], form input[type=email], form input[type=password], form input[type=number], form input[type=checkbox], form input[type=radio], form textarea');
+let passwordField = document.querySelector('form input[name=password]');
+let password2Field = document.querySelector('form input[name=password2]');
 
 function validateNullFields(fields) {
     // triggered by submission
+    console.log(fields);
     fields.forEach(field => {
         if(field.value) {
             // handle pass
@@ -79,6 +83,7 @@ function validateNullFields(fields) {
             // handle error
             field.classList.add('error');
             field.classList.remove('pass');
+            console.log(field.name + ' is blank.');
         }
     });
 }
@@ -95,53 +100,44 @@ function validateNullField(field) {
     }
 }
 
-function comparePasswords(pws = []) {
+function comparePasswords(pw, pw2) {
     // triggered by submission, blur, and input change
-    let passwords = [];
-    pws.forEach(pw => {
-        passwords.push(pw.value)
-    })
-    if(passwords.some((value => value === ''))) {
+    if(pw.value === "" | pw2.value === "") {
+        pw.classList.remove('pass');
+        pw2.classList.remove('pass');
+        pw.classList.remove('error');
+        pw2.classList.remove('error');
         return false;
     }
-    if(passwords.every((value => value === passwords[0]))) {
+    if(pw.value===pw2.value) {
         // handle pass
-        password.classList.add('pass');
-        password2.classList.add('pass');
-        password.classList.remove('error');
-        password2.classList.remove('error');
-        console.log('password match');
+        pw.classList.add('pass');
+        pw2.classList.add('pass');
+        pw.classList.remove('error');
+        pw2.classList.remove('error');
     } else {
         // handle error
-        password.classList.add('error');
-        password2.classList.add('error');
-        password.classList.remove('pass');
-        password2.classList.remove('pass');
-        console.log('password not match');
+        pw2.classList.add('error');
+        pw2.classList.remove('pass');
+        console.log(`${pw.value} and ${pw2.value} are not match`);
     }
 }
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    comparePasswords(passwordFields);
+    comparePasswords(passwordField, password2Field);
     validateNullFields(requiredFields);
 });
 
 requiredFields.forEach(requiredField => {
+    console.log(requiredField.name);
     requiredField.addEventListener('input', () => {
         validateNullField(requiredField);
-        passwordFields.forEach(passwordField => {
-            if(passwordField.name === requiredField.name && requiredField.value) {
-                comparePasswords(passwordFields);
-            }
-        });
     });
     requiredField.addEventListener('blur', () => {
         validateNullField(requiredField);
-        passwordFields.forEach(passwordField => {
-            if(passwordField.name === requiredField.name && requiredField.value) {
-                comparePasswords(passwordFields);
-            }
-        });
+        if((requiredField.name === passwordField.name | requiredField.name === password2Field.name) && requiredField.value) {
+            comparePasswords(passwordField, password2Field);
+        }
     });
 });
