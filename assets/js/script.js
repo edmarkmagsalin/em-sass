@@ -68,8 +68,10 @@ window.addEventListener('load', animate)
 
 const form = document.querySelector('form');
 const requiredFields = document.querySelectorAll('form input[type=text], form input[type=email], form input[type=password], form input[type=number], form input[type=checkbox], form input[type=radio], form textarea');
-let passwordField = document.querySelector('form input[name=password]');
-let password2Field = document.querySelector('form input[name=password2]');
+const passwordField = document.querySelector('form input[name=password]');
+const password2Field = document.querySelector('form input[name=password2]');
+const numberField = document.querySelectorAll('form input[name=age]')
+
 
 function validateNullFields(fields) {
     // triggered by submission

@@ -24,6 +24,10 @@
     &-transparent {
         background-color: transparent;
     }
+
+    &-primary {
+        background-color: $primaryColor;
+    }
     
     &-blur {
         backdrop-filter: blur(10px);

@@ -99,7 +99,7 @@ textarea {
 }
 
 .color-secondary {
-  color: #005757;
+  color: #bd5c5c;
 }
 
 .bg {
@@ -108,6 +108,10 @@ textarea {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-primary {
+  background-color: #5cbdbd;
 }
 
 .bg-blur {
