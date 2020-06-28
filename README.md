@@ -2,10 +2,8 @@
 
 ## Purpose
 Build website faster
-___
 
-
-## List of Re-usable <b>Layout</b> and <b>Components</b>
+## List of Re-usable Layout and Components
 
 ### Top navigation
 - Logo + name
