@@ -25,12 +25,15 @@ ___
 - List items
 
 ### Features
-- Three column card with logo Heading
+- Three column card with logo Heading and desicription
 
 ### Image + text
 - Image
 - Heading (h2)
 - Description (p)
+
+### Overlay
+- This should be able to contain any components
 
 ### Bottom navigation
 - Logo + name (Subtle variation)
