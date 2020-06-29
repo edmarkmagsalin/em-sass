@@ -33,7 +33,7 @@ a {
 
 ::selection {
     background-color: $secondaryColor;
-    color: var(--backgroundColor);
+    color: inherit;
 }
 
 textarea {

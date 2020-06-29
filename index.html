@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EM SASS 😎</title>
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#3e863d">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <title>EM Web Template</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <script src="./assets/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/1ab0e947a4.js" crossorigin="anonymous"></script>
 </head>
 <body data-theme="default">
     <header>
@@ -13,25 +23,27 @@
             <source src="./assets/videos/bg.mp4" type="video/mp4">
         </video>
         
-        <nav class="bg-blur">
+        <nav class="bg-primary">
             <div class="container">
                 <ul>
                     <li>
                         <div class="logo">
-                            <a href="./"><img src="./assets/images/logo.png" alt="EM"> EM SASS</a>
+                            <a href="./"><img src="./assets/images/logo.png" alt="EM"> EM Web Template</a>
                         </div>
                     </li>
                 </ul>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#" class="active">HOME</a></li>
                     <li>
-                        <div class="toggles">
-                            <input type="checkbox" name="darkmode" id="darkmode">
-                            <label for="darkmode"></label>
-                        </div>
+                        <label>PORTFOLIO</label>
+                        <ul>
+                            <li>
+                                <a href="#">Web design</a>
+                                <a href="#">Web site</a>
+                            </li>
+                        </ul>
                     </li>
+                    <li><a href="#">CONTACT US</a></li>
                 </ul>
             </div>
         </nav>
@@ -46,7 +58,22 @@
     <main>
         <section id="form-section">
             <div class="container">
-                <form action="./index.html" method="get" class="fade-down">
+                <form action="./register.html" method="get" class="fade-down" id="login">
+                    <h2>Login</h2>
+                    <div class="labeled-input">
+                        <input type="text" name="userid" id="userid">
+                        <label for="userid">Email / Username / Mobile</label>
+                    </div>
+
+                    <div class="labeled-input">
+                        <input type="password" name="password" id="password">
+                        <label for="password">Password</label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Log in">
+                    </div>
+                </form>
+                <form action="./register.html" method="get" class="fade-down">
                     <h2>Register</h2>
 
                     <small>Basic information</small>
@@ -88,31 +115,13 @@
                     </div>
                     
                     <div class="labeled-input">
-                        <input type="week" name="birth_week" id="birth_week">
-                        <label for="birth_week">Birth Week</label>
-                    </div>
-                    
-                    <div class="labeled-input">
                         <input type="date" name="birth_date" id="birth_date">
                         <label for="birth_date">Birth date</label>
                     </div>
 
                     <div class="labeled-input">
-                        <input type="time" name="birth_time" id="birth_time">
-                        <label for="birth_time">Birth time</label>
-                    </div>
-                    
-                    <div class="labeled-input">
-                        <input type="file" name="attachment" id="attachment">
-                    </div>
-                    
-                    <div class="labeled-input">
-                        <input type="color" name="favorite_color">
-                    </div>
-
-                    <div class="labeled-input">
-                        <textarea name="description" id="description" cols="30" rows="2" maxlength="300"></textarea>
-                        <label for="description">Description</label>
+                        <textarea name="message" id="message" cols="30" rows="2" maxlength="300"></textarea>
+                        <label for="message">Message..</label>
                     </div>
 
                     <div>
@@ -247,14 +256,28 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="bg-dark">
         <nav>
             <div class="container">
                 <ul>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li>
+                        <small>Darkmode:</small>
+                    </li>
+                    <li>
+                        <div class="toggles">
+                            <input type="checkbox" name="darkmode" id="darkmode">
+                            <label for="darkmode"></label>
+                        </div>
+                    </li>
                 </ul>
                 <ul>
+                    <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fa-2x"></i></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fa-2x"></i></a></li>
+                    <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fa-2x"></i></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">FAQs</a></li>
                     <li><small>Copyright &copy; 2020 Edmark Magsalin</small></li>
                 </ul>
             </div>

@@ -34,7 +34,11 @@ header > nav {
         font-weight: bold;
         padding: .5rem;
         display: block;
-        color: $primaryColor;
+        color: $lightColor;
+    }
+
+    & a {
+        color: $lightColor;
     }
 }
 
@@ -43,6 +47,7 @@ footer > nav {
 
     & > div > ul {
         @include flexWrapCenter;
+        justify-content: center;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -55,6 +60,6 @@ footer > nav {
     }
     & > div > ul > li > a:hover{
         text-decoration: underline;
-        color: $lightColor;
+        color: $primaryColor;
     }
 }

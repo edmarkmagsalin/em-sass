@@ -48,7 +48,7 @@ a:hover {
 
 ::selection {
   background-color: #bd5c5c;
-  color: var(--backgroundColor);
+  color: inherit;
 }
 
 textarea {
@@ -112,6 +112,18 @@ textarea {
 
 .bg-primary {
   background-color: #5cbdbd;
+}
+
+.bg-dark {
+  background-color: #0d0d0d;
+}
+
+.bg-gray {
+  background-color: silver;
+}
+
+.bg-light {
+  background-color: #f2f2f2;
 }
 
 .bg-blur {
@@ -572,7 +584,11 @@ header > nav > div > ul > li > * {
   font-weight: bold;
   padding: .5rem;
   display: block;
-  color: #5cbdbd;
+  color: #f2f2f2;
+}
+
+header > nav a {
+  color: #f2f2f2;
 }
 
 footer > nav {
@@ -583,6 +599,7 @@ footer > nav > div > ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -597,7 +614,7 @@ footer > nav > div > ul > li > * {
 
 footer > nav > div > ul > li > a:hover {
   text-decoration: underline;
-  color: #f2f2f2;
+  color: #5cbdbd;
 }
 
 header {

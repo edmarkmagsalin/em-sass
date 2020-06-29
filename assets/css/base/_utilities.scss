@@ -28,13 +28,25 @@
     &-primary {
         background-color: $primaryColor;
     }
+
+    &-dark {
+        background-color: $darkColor;
+    }
+
+    &-gray {
+        background-color: $grayColor;
+    }
+
+    &-light {
+        background-color: $lightColor;
+    }
     
     &-blur {
         backdrop-filter: blur(10px);
     }
 
     &-overlay {
-        background-color: transparentize($greyColor, .5);
+        background-color: transparentize($grayColor, .5);
     }
 
     &-img1-overlay {

@@ -68,8 +68,8 @@ window.addEventListener('load', animate)
 
 const form = document.querySelector('form');
 const requiredFields = document.querySelectorAll('form input[type=text], form input[type=email], form input[type=password], form input[type=number], form input[type=checkbox], form input[type=radio], form textarea');
-const passwordField = document.querySelector('form input[name=password]');
-const password2Field = document.querySelector('form input[name=password2]');
+const pwField = document.querySelector('form input[name=password]');
+const pw2Field = document.querySelector('form input[name=password2]');
 const numberField = document.querySelectorAll('form input[name=age]')
 
 
@@ -127,19 +127,18 @@ function comparePasswords(pw, pw2) {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    comparePasswords(passwordField, password2Field);
+    comparePasswords(pwField, pw2Field);
     validateNullFields(requiredFields);
 });
 
 requiredFields.forEach(requiredField => {
-    console.log(requiredField.name);
     requiredField.addEventListener('input', () => {
         validateNullField(requiredField);
     });
     requiredField.addEventListener('blur', () => {
         validateNullField(requiredField);
-        if((requiredField.name === passwordField.name | requiredField.name === password2Field.name) && requiredField.value) {
-            comparePasswords(passwordField, password2Field);
+        if((requiredField.name === pwField.name | requiredField.name === pw2Field.name) && requiredField.value) {
+            comparePasswords(pwField, pw2Field);
         }
     });
 });

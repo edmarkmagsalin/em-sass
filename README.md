@@ -1,4 +1,4 @@
-# EM WEB TEMPLATE
+# EM Web Template
 
 ## Purpose
 Build website faster
@@ -41,7 +41,7 @@ Build website faster
 - FAQs link
 - Disclaimer
 
-### Sign in
+### Log in
 - Email address / username / mobile number
 - password
 - Sign in Button
@@ -60,13 +60,14 @@ Build website faster
 - Mobile number ()
 - Username text
 - Birth date (month, day, year + date picker)
-- Save Button
-- Cancel Button
 
 - Address
 - Country text with intellisense
 - State/Province disabled until Country has value
 - City disabled until state/province has value
+
+- Save Button
+- Cancel Button
 
 ### Payment
 #### Billing address
@@ -81,3 +82,8 @@ Build website faster
 - Card holder name
 - Expiration date (month, year + month picker)
 - CVV text 3
+
+#### Contact us
+- Full name
+- Email Address
+- Message
